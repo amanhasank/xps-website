@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/xps-website/static/css/main.19253d0a.css",
+    "main.js": "/xps-website/static/js/main.2ff3d342.js",
+    "index.html": "/xps-website/index.html",
+    "main.19253d0a.css.map": "/xps-website/static/css/main.19253d0a.css.map",
+    "main.2ff3d342.js.map": "/xps-website/static/js/main.2ff3d342.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19253d0a.css",
+    "static/js/main.2ff3d342.js"
+  ]
+}
