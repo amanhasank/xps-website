@@ -41,11 +41,16 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} Xtra Precision Screws Pvt. Ltd. All rights reserved.
       </div>
       {/* Back to Top Button */}
-      <a href="#" className="absolute right-6 bottom-6 bg-blue-700 text-white p-2 rounded-full shadow-lg hover:bg-blue-500 transition">
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="absolute right-6 bottom-6 bg-blue-700 text-white p-2 rounded-full shadow-lg hover:bg-blue-500 transition"
+        aria-label="Back to Top"
+      >
         <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <path d="M5 15l7-7 7 7"/>
         </svg>
-      </a>
+      </button>
     </footer>
   );
 } 
