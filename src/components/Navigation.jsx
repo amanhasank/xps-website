@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
   return (
@@ -34,12 +35,12 @@ export default function Navigation() {
             <span className="text-2xl font-bold text-blue-800">XPS INDIA</span>
           </div>
           <nav className="space-x-6 text-sm font-medium">
-            <a href="/" className="text-blue-600">Home</a>
-            <a href="/products" className="text-gray-600 hover:text-blue-600">Products</a>
-            <a href="/about" className="text-gray-600 hover:text-blue-600">About Us</a>
-            <a href="/downloads" className="text-gray-600 hover:text-blue-600">Downloads</a>
-            <a href="/careers" className="text-gray-600 hover:text-blue-600">Careers</a>
-            <a href="/contact" className="text-gray-600 hover:text-blue-600">Contact Us</a>
+            <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Home</NavLink>
+            <NavLink to="/products" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Products</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>About Us</NavLink>
+            <NavLink to="/downloads" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Downloads</NavLink>
+            <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Careers</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Contact Us</NavLink>
           </nav>
         </div>
       </header>

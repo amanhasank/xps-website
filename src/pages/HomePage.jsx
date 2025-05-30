@@ -1,8 +1,10 @@
 import React from "react";
+import HeroSlider from "../components/HeroSlider";
 
 export default function HomePage() {
   return (
     <main>
+      <HeroSlider />
       {/* Hero Section */}
       <section className="bg-blue-50 py-16 text-center">
         <h1 className="text-4xl font-bold mb-4 text-blue-900">Welcome to XPS India</h1>
@@ -44,6 +46,39 @@ export default function HomePage() {
               We provide a full spectrum of services that can give your components the characteristics they need for your intended use. We are able to undertake multiple processes, and can also provide customized solutions to your requirements.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Download Section */}
+      <section className="py-8 px-6 flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="bg-gradient-to-tr from-blue-50 to-blue-100 rounded-xl shadow-lg p-8 flex flex-col items-center max-w-md w-full">
+          <h3 className="text-2xl font-bold text-blue-900 mb-4">Download Resources</h3>
+          <a
+            href="https://xpsindia.com/assets/images/XPS-brochure.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mb-4"
+          >
+            <button className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200 text-lg flex items-center justify-center gap-2">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M12 5v14m7-7H5" />
+              </svg>
+              Download E-Catalogue
+            </button>
+          </a>
+          <a
+            href="https://xpsindia.com/assets/images/Xtra-Precision-Price-List%20-2021.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow transition duration-200 text-lg flex items-center justify-center gap-2">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M12 5v14m7-7H5" />
+              </svg>
+              Download Price List
+            </button>
+          </a>
         </div>
       </section>
 
