@@ -1,8 +1,14 @@
-import React from "react";
-import { Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import React, { useState } from "react";
+import { Mail, Phone, Linkedin, Twitter, Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       {/* Top Bar */}
@@ -34,16 +40,46 @@ export default function Navigation() {
             <img src="/logo.png" alt="XPS India Logo" className="h-10 w-auto" />
             <span className="text-2xl font-bold text-blue-800">XPS INDIA</span>
           </div>
-          <nav className="space-x-6 text-sm font-medium">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-6 text-sm font-medium">
             <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Home</NavLink>
             <NavLink to="/products" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Products</NavLink>
             <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>About Us</NavLink>
-            <NavLink to="/downloads" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Downloads</NavLink>
+            <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Industry</NavLink>
             <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Careers</NavLink>
             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Contact Us</NavLink>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button onClick={toggleMobileMenu} className="text-gray-600 hover:text-blue-600 focus:outline-none">
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-white z-[60] transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <div className="flex justify-between items-center px-6 py-4 shadow-md">
+           <div className="flex items-center space-x-3">
+            <img src="/logo.png" alt="XPS India Logo" className="h-10 w-auto" />
+            <span className="text-2xl font-bold text-blue-800">XPS INDIA</span>
+          </div>
+          <button onClick={toggleMobileMenu} className="text-gray-600 hover:text-blue-600 focus:outline-none">
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        <nav className="flex flex-col space-y-6 px-6 py-8 text-lg font-medium">
+          <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Home</NavLink>
+          <NavLink to="/products" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Products</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>About Us</NavLink>
+          <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Industry</NavLink>
+          <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Careers</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Contact Us</NavLink>
+        </nav>
+      </div>
     </>
   );
 } 

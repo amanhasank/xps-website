@@ -75,7 +75,7 @@ export default function HeroSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 5000,
     arrows: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
@@ -113,9 +113,9 @@ export default function HeroSlider() {
                     backSpeed={40}
                     backDelay={1200}
                     loop
-                    className="text-4xl md:text-6xl font-bold text-orange-500 mb-4 drop-shadow-lg animate-fadeInUp"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-orange-500 mb-4 drop-shadow-lg animate-fadeInUp"
                   />
-                  <p className="text-2xl md:text-3xl text-white font-semibold animate-fadeInUp drop-shadow-lg mt-2">
+                  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-white font-semibold animate-fadeInUp drop-shadow-lg mt-2">
                     {slide.subtitle}
                   </p>
                 </>
@@ -125,18 +125,23 @@ export default function HeroSlider() {
         ))}
       </Slider>
       {/* Fixed Custom Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20 pointer-events-auto">
+      <div className="absolute md:bottom-6 bottom-2 left-1/2 -translate-x-1/2 flex gap-2 z-20 pointer-events-auto backdrop-blur-sm">
         {slides.map((_, dotIdx) => (
           <button
             key={dotIdx}
             onClick={() => sliderRef.current.slickGoTo(dotIdx)}
-            className={`w-4 h-4 rounded-full border-2 transition-all duration-200 ${
-              current === dotIdx
-                ? 'bg-blue-600 border-blue-600'
-                : 'bg-white border-blue-300'
-            }`}
+            className="w-6 h-6 flex items-center justify-center p-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-full bg-transparent"
             aria-label={`Go to slide ${dotIdx + 1}`}
-          />
+            style={{ touchAction: "manipulation" }}
+          >
+            <span
+              className={`w-3 h-3 rounded-full shadow ${
+                current === dotIdx
+                  ? "bg-blue-600/80 border-2 border-blue-600"
+                  : "bg-white/60 border-2 border-blue-200"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>
