@@ -23,9 +23,15 @@ export default function ContactPage() {
 
   return (
     <main>
-      {/* Hero Section */}
-      <section className="bg-blue-50 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4 text-blue-900">Let's Talk</h1>
+      {/* Hero Section with Image */}
+      <section
+        className="relative h-[33vh] md:h-[40vh] bg-cover bg-center flex items-center justify-center text-center"
+        style={{ backgroundImage: "url('/contact-hero.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div> {/* Overlay */}
+        <div className="relative z-10 text-white">
+          <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg animate-fadeInScaleContact">Let's Talk</h1>
+        </div>
       </section>
 
       {/* Contact Information and Form Section */}
