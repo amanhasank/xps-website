@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Phone } from "lucide-react";
+import jobOpenings from '../data/jobOpenings'; // Import job data
 
 export default function CareersPage() {
+  const [applyingFor, setApplyingFor] = useState("");
+
+  const handleApplyClick = (jobTitle) => {
+    setApplyingFor(jobTitle);
+    // Optional: Scroll to the form section
+    const formElement = document.getElementById('application-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gray-100 text-gray-800">
       {/* Hero Section with Image */}
@@ -35,8 +47,8 @@ export default function CareersPage() {
 
           {/* Contact Information */}
           <div className="mt-8 pt-6 border-t border-gray-200">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-900">Contact Us</h2>
-            <p className="text-lg mb-4 text-gray-700">We look forward to receiving your resume:</p>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-900">General Inquiries</h2>
+            <p className="text-lg mb-4 text-gray-700">For general career inquiries, you can reach us:</p>
 
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-gray-700">
@@ -56,6 +68,91 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+
+      {/* Current Openings Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Current Openings</h2>
+
+          <div className="space-y-8">
+            {jobOpenings.map((job) => (
+              <div key={job.id} className="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-blue-800 mb-2">{job.title}</h3>
+                <p className="text-gray-700 mb-4">{job.description}</p>
+                <button onClick={() => handleApplyClick(job.title)} className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded shadow transition duration-200">
+                  Apply Now
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form Section */}
+      <section id="application-form" className="py-16 px-6">
+         <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Apply for {applyingFor || "a Position"}</h2>
+
+          <form action="https://formsubmit.co/111222honey@gmail.com" method="POST" className="space-y-6" enctype="multipart/form-data">
+             {/* Hidden fields for Formsubmit.co */}
+            <input type="hidden" name="_subject" value="New Job Application - XPSIndia.com" />
+            <input type="hidden" name="_next" value="http://localhost:3000/thank-you.html" />
+            <input type="hidden" name="_honey" style={{ display: 'none' }} /> {/* Anti-spam field */}
+
+            {/* Hidden field for Job Title - populated by JS */}
+            <input type="hidden" name="Job Title" value={applyingFor} />
+
+            <div>
+              <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Full Name</label>
+              <input type="text" id="fullName" name="Full Name" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your full name" />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="Email" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your email address" />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input type="tel" id="phone" name="Phone Number" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your phone number (optional)" />
+            </div>
+
+            <div>
+              <label htmlFor="experience" className="block text-sm font-medium text-gray-700">Years of Experience</label>
+              <input type="number" id="experience" name="Years of Experience" min="0" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="e.g., 5" />
+            </div>
+
+            <div>
+              <label htmlFor="resumeLink" className="block text-sm font-medium text-gray-700">Resume Link (URL)</label>
+              <input type="url" id="resumeLink" name="Resume Link" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Link to your resume (e.g., Google Drive, Dropbox)" />
+            </div>
+
+            {/* New field for Resume File Upload */}
+            <div>
+              <label htmlFor="resumeFile" className="block text-sm font-medium text-gray-700">Resume (PDF)</label>
+              <input type="file" id="resumeFile" name="Resume File" accept=".pdf" className="mt-1 block w-full text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message / Cover Letter</label>
+              <textarea id="message" name="Message / Cover Letter" rows="4" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Tell us about yourself and why you're a good fit..."></textarea>
+            </div>
+
+            <div>
+              <button type="submit" className="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+       {/* Optional: Inline styles for the honey pot field */}
+      <style jsx>{`
+        input[name="_honey"] {
+          display: none;
+        }
+      `}</style>
     </main>
   );
 } 

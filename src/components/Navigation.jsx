@@ -45,8 +45,10 @@ export default function Navigation() {
           <nav className="hidden md:flex space-x-6 text-sm font-medium">
             <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Home</NavLink>
             <NavLink to="/products" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Products</NavLink>
-            <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>About Us</NavLink>
+            <NavLink to="/manufacturing" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Manufacturing</NavLink>
             <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Industry</NavLink>
+            <NavLink to="/events" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Events & Media</NavLink>
+            <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Plant Gallery</NavLink>
             <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Careers</NavLink>
             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-blue-600"}>Contact Us</NavLink>
           </nav>
@@ -74,8 +76,10 @@ export default function Navigation() {
         <nav className="flex flex-col space-y-6 px-6 py-8 text-lg font-medium">
           <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Home</NavLink>
           <NavLink to="/products" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Products</NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>About Us</NavLink>
+          <NavLink to="/manufacturing" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Manufacturing</NavLink>
           <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Industry</NavLink>
+          <NavLink to="/events" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Events & Media</NavLink>
+          <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Plant Gallery</NavLink>
           <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Careers</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-600 font-semibold" : "text-gray-800 hover:text-blue-600"} onClick={toggleMobileMenu}>Contact Us</NavLink>
         </nav>

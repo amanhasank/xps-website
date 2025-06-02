@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
   {
-    image: "/slide1.png",
+    image: "/slide1.jpeg",
     typedStrings: [
       "XPS - Biggest Manufacturer",
       "One Stop"
@@ -14,7 +14,7 @@ const slides = [
     subtitle: "High-tensile fasteners for every industry",
   },
   {
-    image: "/slide2.png",
+    image: "/slide2.jpeg",
     typedStrings: [
       "Quality and Precision",
       "Certified and Trusted."
@@ -22,7 +22,7 @@ const slides = [
     subtitle: "Delivering excellence for 50+ years",
   },
   {
-    image: "/slide3.png",
+    image: "/slide3.jpeg",
     typedStrings: [
       "Innovation in Fasteners"
     ],

@@ -1,56 +1,184 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
-export default function Footer() {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerSections = [
+    {
+      title: "Company",
+      links: [
+        { name: "About Us", path: "/" },
+        { name: "Our Products", path: "/products" },
+        { name: "Manufacturing", path: "/manufacturing" },
+        { name: "Plant Gallery", path: "/plant-gallery" },
+        { name: "Contact Us", path: "/contact" },
+      ],
+    },
+    {
+      title: "Products",
+      links: [
+        { name: "Socket Head Cap Screws", path: "/products#socket-head-cap-screws" },
+        { name: "Button Head Cap Screws", path: "/products#button-head-cap-screws" },
+        { name: "Hex Head Cap Screws", path: "/products#hex-head-cap-screws" },
+        { name: "Special Fasteners", path: "/products#special-fasteners" },
+        { name: "View All Products", path: "/products" },
+      ],
+    },
+    {
+      title: "More",
+      links: [
+        { name: "Events", path: "/events" },
+        { name: "Careers", path: "/careers" },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { 
+      icon: Facebook, 
+      href: "https://facebook.com", 
+      label: "Facebook",
+      color: "hover:text-blue-500",
+      bgColor: "hover:bg-white/10"
+    },
+    { 
+      icon: Twitter, 
+      href: "https://twitter.com", 
+      label: "Twitter",
+      color: "hover:text-sky-400",
+      bgColor: "hover:bg-white/10"
+    },
+    { 
+      icon: Instagram, 
+      href: "https://instagram.com", 
+      label: "Instagram",
+      color: "hover:text-pink-500",
+      bgColor: "hover:bg-white/10"
+    },
+    { 
+      icon: Linkedin, 
+      href: "https://linkedin.com", 
+      label: "LinkedIn",
+      color: "hover:text-blue-400",
+      bgColor: "hover:bg-white/10"
+    },
+  ];
+
+  const contactInfo = [
+    { icon: Phone, text: "+91 1234567890" },
+    { icon: Mail, text: "info@xpsindia.com" },
+    { icon: MapPin, text: "123 Industrial Area, City, State, India" },
+  ];
+
   return (
-    <footer className="bg-gradient-to-tr from-blue-900 via-blue-800 to-gray-900 text-white pt-12 pb-0 px-4 mt-12 relative">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-        {/* Company Image */}
-        <div className="flex-1 flex justify-center md:justify-start mb-8 md:mb-0">
-          <img src="/factory.png" alt="XPS Factory" className="w-80 h-56 object-cover rounded-xl shadow-2xl border-4 border-blue-700" />
-        </div>
-        {/* Contact Info */}
-        <div className="flex-1 text-center md:text-left space-y-4">
-          <div className="font-semibold text-lg text-blue-300">Online Support</div>
-          <div className="text-2xl font-bold text-white">+91 8396 941 941</div>
-          <div className="font-semibold mt-6 text-blue-300">ASK YOUR QUESTIONS BY EMAIL:</div>
-          <div className="text-lg text-white">sales@xpsindia.com</div>
-        </div>
-        {/* Social & Logo */}
-        <div className="flex-1 flex flex-col items-center md:items-end gap-6">
-          <div className="font-semibold mb-2 text-blue-300">GET IN TOUCH</div>
-          <div className="flex space-x-4 mb-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-800 rounded-full p-2 hover:bg-blue-600 hover:text-white transition shadow">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="https://twitter.com/xps_india" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-800 rounded-full p-2 hover:bg-blue-500 hover:text-white transition shadow">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-white text-pink-600 rounded-full p-2 hover:bg-pink-500 hover:text-white transition shadow">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="https://www.linkedin.com/company/xps-india" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-800 rounded-full p-2 hover:bg-blue-700 hover:text-white transition shadow">
-              <Linkedin className="w-5 h-5" />
-            </a>
+    <footer className="bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Company Info with Logo */}
+          <div className="space-y-3">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center md:items-start"
+            >
+              <motion.img
+                src="/logo.png"
+                alt="XPS Logo"
+                className="w-40 h-auto mb-3 bg-white rounded-lg p-2"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              />
+              <p className="text-gray-300 text-sm text-center md:text-left">
+                Leading manufacturer of high-quality fasteners and special components for various industries.
+              </p>
+            </motion.div>
+            <div className="space-y-2">
+              {contactInfo.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors text-sm"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.text}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
-          <img src="/logo.png" alt="XPS Logo" className="w-48 h-auto bg-white rounded shadow-md p-2 hover:scale-105 transition" />
-          <div className="text-xs text-blue-200 mt-2">XTRA PRECISION SCREWS</div>
+
+          {/* Footer Sections */}
+          {footerSections.map((section, index) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="space-y-3"
+            >
+              <h3 className="text-base font-semibold mb-3">{section.title}</h3>
+              <ul className="space-y-1.5">
+                {section.links.map((link) => (
+                  <motion.li
+                    key={link.name}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      to={link.path}
+                      className="text-gray-300 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Social Links with Enhanced Animations */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-8 pt-6 border-t border-gray-700"
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0">
+            <p className="text-gray-300 text-sm">
+              © {currentYear} XPS India. All rights reserved.
+            </p>
+            <div className="flex space-x-3">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.2, 
+                    y: -5,
+                    rotate: 5,
+                    transition: { duration: 0.2 }
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`p-1.5 rounded-full ${social.bgColor} ${social.color} transition-all duration-300`}
+                >
+                  <social.icon className="w-5 h-5" />
+                  <span className="sr-only">{social.label}</span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
-      <div className="border-t border-blue-700 mt-10 pt-4 pb-2 text-center text-sm text-blue-200">
-        &copy; {new Date().getFullYear()} Xtra Precision Screws Pvt. Ltd. All rights reserved.
-      </div>
-      {/* Back to Top Button */}
-      <button
-        type="button"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="absolute right-6 bottom-6 bg-blue-700 text-white p-2 rounded-full shadow-lg hover:bg-blue-500 transition"
-        aria-label="Back to Top"
-      >
-        <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M5 15l7-7 7 7"/>
-        </svg>
-      </button>
     </footer>
   );
-} 
+};
+
+export default Footer; 
