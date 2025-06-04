@@ -132,11 +132,13 @@ export default function EventsPage() {
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/events/hero-bg.jpg')" }}
+          style={{ backgroundImage: "url('/events/main.jpg')" }}
         />
-        <div className="relative z-20 h-full flex items-center justify-center text-center px-4">
+        <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
           <Fade triggerOnce>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Events & Media</h1>
+          </Fade>
+          <Fade triggerOnce delay={200}>
             <p className="text-xl md:text-2xl">Join us at upcoming industry events</p>
           </Fade>
         </div>
