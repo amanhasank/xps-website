@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Fade, Zoom } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function PlantGalleryPage() {
