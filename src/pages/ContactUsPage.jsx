@@ -62,7 +62,7 @@ export default function ContactUsPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
               </svg>
-              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 8396 941 941</a>
+              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9254012456</a>
             </p>
             <p className="flex items-center text-gray-700 mt-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
@@ -75,7 +75,8 @@ export default function ContactUsPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              Address: <span className="ml-2">Plot-161, HSIIDC, I.E. Kutana, Hissar Road, Rohtak, Haryana 124001, India</span>
+              Address: <span className="ml-2">Xtra Precision Screws Private Limited
+57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India</span>
             </p>
           </div>
 
