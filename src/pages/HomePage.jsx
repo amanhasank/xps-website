@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import HeroSlider from "../components/HeroSlider";
 import { Fade } from "react-awesome-reveal";
-import { X, Eye } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { productCategories } from '../data/products';
-import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedImageAlt, setSelectedImageAlt] = useState("");
-  const navigate = useNavigate();
 
   const openModal = (imageSrc, imageAlt) => {
     setSelectedImage(imageSrc);
@@ -30,22 +28,23 @@ export default function HomePage() {
       <HeroSlider />
       {/* Hero Section */}
       <section className="bg-blue-50 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4 text-blue-900">Welcome to XPS India</h1>
-        <p className="text-lg text-blue-800">Manufacturers of High-Tensile Fasteners</p>
+        <h1 className="text-4xl font-bold mb-4 text-blue-900">Leading Manufacturer of High Tensile Fasteners in India</h1>
+        <p className="text-lg text-blue-800">Specialized in Nuts, Bolts, Screws, Socket Head, Allen Bolts & More</p>
         <a href="/products">
           <button className="mt-6 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
-            Explore Products
+            Explore Our Fastener Range
           </button>
         </a>
       </section>
 
       {/* About Section */}
       <section className="py-12 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4 text-blue-900">About Us</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-blue-900">About XPS India - Your Trusted Fastener Manufacturer</h2>
         <p className="text-base leading-relaxed">
           XPS India is a leading manufacturer of high-strength fasteners with over 50 years
-          of experience in supplying OEMs globally. We are ISO 9001 certified and specialize in
-          manufacturing fasteners as per DIN, ISO, ANSI, and BS standards.
+          of experience in supplying OEMs globally. We specialize in manufacturing premium quality nuts, bolts, screws, 
+          socket head cap screws, allen bolts, hex bolts, CSK screws, grub screws, and button head cap screws. 
+          Our state-of-the-art facilities include advanced CNC machining, heat treatment, cold forging, and hot forging processes.
         </p>
       </section>
 
@@ -54,19 +53,36 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="space-y-6 text-gray-700">
             <p className="leading-relaxed">
-              We are pleased to introduce ourselves as the manufacturers of high tensile fasteners under the brand name of "XPS" and are supplying our products throughout India to many consumers directly as well as through our strong dealers network. XPS specializes in the production of all kinds of high strength fasteners. The products are in conformity with GB, ISO, DIN, AS, ANSL, BS etc.
+              We are pleased to introduce ourselves as the manufacturers of high tensile fasteners under the brand name of "XPS". 
+              Our comprehensive range includes socket head cap screws, allen bolts, hex bolts, CSK screws, grub screws, and button head cap screws. 
+              We supply our products throughout India to many consumers directly as well as through our strong dealers network. 
+              XPS specializes in the production of all kinds of high strength fasteners conforming to GB, ISO, DIN, AS, ANSI, BS standards.
             </p>
             
             <p className="leading-relaxed">
-              Based firmly on ISO9001 quality system standards, the company operates each link from raw materials processing to the production process in strict accordance with the procedures and boasts well-qualified quality inspectors and perfect testing equipment's, which take effective control on the production process to ensure product quality. With the experience of 50 years in the fastener industry, XPS management thrives on it's know how capabilities of dealing & handling big OEM's in all the sectors like 2-wheeler, commercial vehicle manufacturer, heavy engineering industries etc.. Our team is well experienced and expert in handling of supply chain management.
+              Our manufacturing excellence is backed by ISO9001 quality system standards. We operate each link from raw materials processing 
+              to the production process with strict quality control. Our facilities include advanced CNC machining, heat treatment, 
+              cold forging, and hot forging processes. With 50 years of experience in the fastener industry, XPS management thrives 
+              on its expertise in handling big OEMs across various sectors including 2-wheeler, commercial vehicle manufacturing, 
+              and heavy engineering industries.
             </p>
 
             <p className="leading-relaxed">
-              From our years in the business, we understand that many of our customers are working to meet tight deadlines, or have a very precise production schedule that they need to adhere to in order to meet their objectives. We are able to work flexibly, and we have the capacity to meet short turnaround times. We will even ship your components to you when we are finished working on them, ensuring they make it to you exactly when required.
+              Our state-of-the-art manufacturing facilities include:
+              • Advanced CNC machining for precision engineering
+              • Heat treatment for superior strength and durability
+              • Cold forging and hot forging processes
+              • Surface finish treatments
+              • Quality testing and inspection
             </p>
 
             <p className="leading-relaxed">
-              We provide a full spectrum of services that can give your components the characteristics they need for your intended use. We are able to undertake multiple processes, and can also provide customized solutions to your requirements.
+              We understand the critical nature of fasteners in your applications. That's why we offer:
+              • Customized fastener solutions
+              • Quick turnaround times
+              • Flexible manufacturing capabilities
+              • Comprehensive quality assurance
+              • Technical support and expertise
             </p>
           </div>
         </div>
@@ -163,10 +179,10 @@ export default function HomePage() {
             <Fade triggerOnce={true} delay={700}>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <img
-                  src="/logos/rohs.png"
+                  src="/logos/bis1.png"
                   alt="BIS Certification 1"
                   className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/rohs.png', 'BIS Certification 1')}
+                  onClick={() => openModal('/logos/bis1.png', 'BIS Certification 1')}
                 />
                 <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
                 <div className="text-sm text-gray-600 text-center">Certification 1</div>
@@ -176,10 +192,10 @@ export default function HomePage() {
             <Fade triggerOnce={true} delay={800}>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <img
-                  src="/logos/rohs.png"
+                  src="/logos/bis2.png"
                   alt="BIS Certification 2"
                   className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/rohs.png', 'BIS Certification 2')}
+                  onClick={() => openModal('/logos/bis2.png', 'BIS Certification 2')}
                 />
                 <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
                 <div className="text-sm text-gray-600 text-center">Certification 2</div>
@@ -189,10 +205,10 @@ export default function HomePage() {
             <Fade triggerOnce={true} delay={900}>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <img
-                  src="/logos/rohs.png"
+                  src="/logos/bis3.png"
                   alt="BIS Certification 3"
                   className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/rohs.png', 'BIS Certification 3')}
+                  onClick={() => openModal('/logos/bis3.png', 'BIS Certification 3')}
                 />
                 <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
                 <div className="text-sm text-gray-600 text-center">Certification 3</div>
@@ -206,7 +222,8 @@ export default function HomePage() {
       <section className="bg-blue-50 py-16">
         <div className="container mx-auto px-6">
           <Fade triggerOnce={true}>
-            <h2 className="text-4xl font-bold text-center mb-12 text-blue-900">Our Products</h2>
+            <h2 className="text-4xl font-bold text-center mb-4 text-blue-900">Premium Fastener Solutions</h2>
+            <p className="text-lg text-center text-blue-800 mb-12">High Tensile Fasteners, Nuts, Bolts, and Specialized Fastening Solutions</p>
           </Fade>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -219,7 +236,7 @@ export default function HomePage() {
                   <div className="relative overflow-hidden h-[200px] flex items-center justify-center">
                     <img
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} - High Tensile Fasteners by XPS India`}
                       className="w-full h-full object-contain p-4 transform transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
@@ -236,7 +253,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <a href="/products">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg transition duration-200 text-lg font-semibold">
-                View Full Product Range
+                View Complete Fastener Range
               </button>
             </a>
           </div>
@@ -318,8 +335,9 @@ export default function HomePage() {
       {/* Contact Section */}
       <section className="py-12 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4 text-blue-900">Contact Us</h2>
-        <p className="mb-2">📍 Plot-161, HSIIDC, I.E. Kutana, Hissar Road, Rohtak, Haryana 124001, India</p>
-        <p className="mb-2">📞 +91 8396 941 941</p>
+        <p className="mb-2">📍 Xtra Precision Screws Private Limited
+57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India</p>
+        <p className="mb-2">📞 +91 9254012456</p>
         <p className="mb-8">📧 sales@xpsindia.com</p>
         <div className="w-full h-64">
           <iframe
@@ -338,7 +356,9 @@ export default function HomePage() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-70 backdrop-filter backdrop-blur-sm transition-opacity duration-300 ease-in-out" onClick={closeModal}>
           <div className="relative bg-white rounded-lg shadow-xl max-w-full max-h-[90vh] overflow-hidden transform transition-all duration-300 ease-in-out scale-95 opacity-0 modal-content" onClick={(e) => e.stopPropagation()}>
             <button onClick={closeModal} className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold z-10 bg-white rounded-full p-1">
-              <X size={24} />
+              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
             <img
               src={selectedImage}

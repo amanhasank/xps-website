@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Fade, Slide, Zoom } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { X, ChevronLeft, ChevronRight, Info } from 'lucide-react';
 
 export default function ManufacturingPage() {
