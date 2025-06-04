@@ -164,7 +164,7 @@ export default function EventsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                      <h3 className="text-3xl font-bold mb-4">{event.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{event.title}</h3>
                       <div className="flex items-center space-x-6 mb-4">
                         <div className="flex items-center">
                           <Calendar className="w-6 h-6 mr-2" />
