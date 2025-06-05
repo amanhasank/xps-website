@@ -251,7 +251,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="/products">
+          <a href="/products">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg transition duration-200 text-lg font-semibold">
                 View Complete Fastener Range
               </button>
@@ -331,7 +331,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Contact Section */}
       <section className="py-12 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-semibold mb-4 text-blue-900">Contact Us</h2>

@@ -180,7 +180,7 @@ export default function Navigation() {
                       duration={300}
                     >
                       <Link
-                        to={product.path}
+                        to={`/products?product=${product.id}`}
                         className="block px-4 py-3 hover:bg-gray-900 transition-all duration-200 group"
                         onClick={() => setIsProductsOpen(false)}
                       >
@@ -325,7 +325,7 @@ export default function Navigation() {
                     duration={300}
                   >
                     <Link
-                      to={product.path}
+                      to={`/products?product=${product.id}`}
                       className="block px-4 py-3 hover:bg-gray-900 transition-all duration-200 group"
                       onClick={() => {
                         setIsProductsOpen(false);

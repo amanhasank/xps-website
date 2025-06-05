@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ContactUsPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    setIsSubmitted(true);
+    // The form will be submitted by FormSubmit.co
+  };
+
   return (
     <main className="container mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center mb-6 text-blue-900">Get in Touch</h1>
@@ -11,26 +18,36 @@ export default function ContactUsPage() {
       <div className="flex flex-col md:flex-row gap-12">
         {/* Contact Form */}
         <div className="md:w-1/2">
-          <form className="space-y-6">
+          <form 
+            action="https://formsubmit.co/111222honey@gmail.com" 
+            method="POST" 
+            className="space-y-6"
+            onSubmit={handleSubmit}
+          >
+            {/* Hidden fields for Formsubmit.co */}
+            <input type="hidden" name="_subject" value="New Contact Form Submission - XPSIndia.com" />
+            <input type="hidden" name="_next" value="http://localhost:3000/contact-thankyou.html" /> 
+            <input type="hidden" name="_honey" style={{ display: 'none' }} /> 
+
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name <span className="text-red-500">*</span></label>
-              <input type="text" id="name" name="name" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" />
+              <input type="text" id="name" name="Full Name" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email <span className="text-red-500">*</span></label>
-              <input type="email" id="email" name="email" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="your.email@example.com" />
+              <input type="email" id="email" name="Email" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="your.email@example.com" />
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
-              <input type="tel" id="phone" name="phone" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Phone Number (Optional)" />
+              <input type="tel" id="phone" name="Phone Number" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Phone Number (Optional)" />
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company Name</label>
-              <input type="text" id="company" name="company" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Company (Optional)" />
+              <input type="text" id="company" name="Company Name" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your Company (Optional)" />
             </div>
             <div>
               <label htmlFor="product" className="block text-sm font-medium text-gray-700">Product Requirement</label>
-              <select id="product" name="product" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+              <select id="product" name="Product Requirement" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="">Select a requirement</option>
                 <option value="bolts">Bolts</option>
                 <option value="nuts">Nuts</option>
@@ -40,7 +57,7 @@ export default function ContactUsPage() {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="4" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message..."></textarea>
+              <textarea id="message" name="Message" rows="4" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message..."></textarea>
             </div>
             <div>
               <button type="submit" className="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -48,10 +65,12 @@ export default function ContactUsPage() {
               </button>
             </div>
           </form>
-          {/* Success message placeholder */}
-          <div id="success-message" className="mt-4 text-green-600 text-center hidden">
-            Thank you for your message! We will get back to you shortly.
-          </div>
+          {/* Success message */}
+          {isSubmitted && (
+            <div className="mt-4 text-green-600 text-center">
+              Thank you for your message! We will get back to you shortly.
+            </div>
+          )}
         </div>
 
         {/* Contact Details */}
@@ -84,8 +103,7 @@ export default function ContactUsPage() {
           <div>
             <h3 className="text-xl font-semibold text-blue-900 mb-2">Our Location</h3>
             <div className="w-full h-64 bg-gray-200 rounded-md shadow-md flex items-center justify-center text-gray-500">
-              {/* Placeholder for Google Maps iframe */}
-               <iframe
+              <iframe
                 title="XPS India Location"
                 className="w-full h-full border-0 rounded-md shadow-md"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.1413201571656!2d76.60383881513015!3d28.900544684802364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912a5abf8fcbfcd%3A0xb7d3f0cf89e6572a!2sXPS%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -98,9 +116,9 @@ export default function ContactUsPage() {
 
           {/* WhatsApp and Call Now Buttons */}
           <div className="flex flex-col space-y-4">
-             {/* WhatsApp Button */}
+            {/* WhatsApp Button */}
             <a
-              href="https://wa.me/918396941941"
+              href="https://wa.me/919817907015"
               className="flex items-center justify-center py-3 px-6 rounded-md shadow-sm text-lg font-semibold text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               target="_blank"
               rel="noopener noreferrer"
@@ -111,9 +129,9 @@ export default function ContactUsPage() {
               WhatsApp Us
             </a>
 
-             {/* Call Now Button (Visible on Mobile) */}
+            {/* Call Now Button (Visible on Mobile) */}
             <a
-              href="tel:+918396941941"
+              href="tel:+919817907015"
               className="md:hidden flex items-center justify-center py-3 px-6 rounded-md shadow-sm text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
