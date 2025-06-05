@@ -15,6 +15,11 @@ export default function PlantGalleryPage() {
     '/plant-gallery/plant-6.jpeg',
     '/plant-gallery/plant-7.jpeg',
     '/plant-gallery/plant-8.jpeg',
+    '/plant-gallery/plant-9.jpg',
+    '/plant-gallery/plant-10.jpg',
+    '/plant-gallery/plant-11.jpg',
+    '/plant-gallery/plant-12.jpg'
+    
   ];
 
   const openModal = (index) => {

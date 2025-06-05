@@ -25,7 +25,7 @@ export const productCategories = [
     id: 2,
     name: 'SOCKET COUNTER SUNK HEAD (CSK)',
     description: 'Screws that sit flush with the surface, featuring a conical head.',
-    image: '/products/bb2.png',
+    image: '/products/bb2.jpg',
     mainImage: '/products/prd2.png',
     technicalImage: '/products/prd-t2.png',
     specifications: [
