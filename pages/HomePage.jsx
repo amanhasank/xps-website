@@ -14,7 +14,7 @@ export default function HomePage() {
           </span>
           <span className="flex items-center space-x-1">
             <Phone className="w-4 h-4" />
-            <span>+91 - 9254012456</span>
+            <span>+91 - 9817907015</span>
           </span>
         </div>
         <div className="flex space-x-3">
@@ -81,7 +81,7 @@ export default function HomePage() {
         <h2 className="text-3xl font-semibold mb-4 text-blue-900">Contact Us</h2>
         <p className="mb-2">📍 Xtra Precision Screws Private Limited
 57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India</p>
-        <p className="mb-2">📞 +91 9254012456</p>
+        <p className="mb-2">📞 +91 9817907015</p>
         <p className="mb-8">📧 sales@xpsindia.com</p>
         <div className="w-full h-64">
           <iframe
