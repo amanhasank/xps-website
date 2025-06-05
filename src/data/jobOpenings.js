@@ -1,24 +1,15 @@
-const jobOpenings = [
+export const jobOpenings = [
   {
     id: 1,
-    title: 'Production Supervisor',
-    description: 'Oversee daily production operations and ensure quality standards are met.',
-  },
-  {
-    id: 2,
-    title: 'Quality Control Engineer',
-    description: 'Implement and monitor quality control processes for manufacturing.',
-  },
-  {
-    id: 3,
-    title: 'Machine Maintenance Technician',
-    description: 'Perform maintenance and repair on production machinery.',
-  },
-  {
-    id: 3,
-    title: 'The great Technician',
-    description: 'Perform maintenance and repair on production machinery.',
-  },
-];
-
-export default jobOpenings; 
+    title: 'Sales & Marketing Executives',
+    locations: ['Bengaluru', 'Coimbatore', 'Ahmedabad', 'Gurugram'],
+    requirements: [
+      'Minimum 1-3 years of experience in Fasteners or relevant industry will be preferable.',
+      'Knowledge of industrial area & dealers market is a must.',
+      'If the applicant is a native of the relevant city, that is preferable & one must know the state language.',
+      'Communication and negotiation skills are a must.',
+      'Must be able to work in deadlines and strong follow-up is required.'
+    ],
+    contactEmail: 'nc@xpsindia.com'
+  }
+]; 
