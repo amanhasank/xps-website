@@ -62,7 +62,7 @@ export default function ContactUsPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
               </svg>
-              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9254012456</a>
+              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9817907015</a>
             </p>
             <p className="flex items-center text-gray-700 mt-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">

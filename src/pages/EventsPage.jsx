@@ -14,17 +14,17 @@ const events = [
     ],
     description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
   },
-  {
-    id: 2,
-    title: "India Warehousing Show 2025 - Mumbai",
-    location: "Bombay Exhibition Centre, Goregaon, Mumbai",
-    date: "20-22 Nov 2025",
-    booth: "Coming Soon",
-    images: [
-      "/events/warehousing-mumbai/ev1.png"
-    ],
-    description: "Visit us at the Mumbai edition of India Warehousing & Logistics Show 2025 to explore our innovative fastening solutions for the logistics sector."
-  },
+  // {
+  //   id: 2,
+  //   title: "India Warehousing Show 2025 - Mumbai",
+  //   location: "Bombay Exhibition Centre, Goregaon, Mumbai",
+  //   date: "20-22 Nov 2025",
+  //   booth: "Coming Soon",
+  //   images: [
+  //     "/events/warehousing-mumbai/ev1.png"
+  //   ],
+  //   description: "Visit us at the Mumbai edition of India Warehousing & Logistics Show 2025 to explore our innovative fastening solutions for the logistics sector."
+  // },
   {
     id: 3,
     title: "Aerodef 2025",
@@ -152,8 +152,8 @@ export default function EventsPage() {
           </Fade>
 
           {/* Featured Upcoming Events */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            {events.slice(0, 2).map((event, index) => (
+          <div className="max-w-4xl mx-auto mb-16">
+            {events.slice(0, 1).map((event, index) => (
               <Fade key={event.id} triggerOnce delay={index * 100}>
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
                   <div className="relative h-[400px] group">
@@ -217,9 +217,14 @@ export default function EventsPage() {
                     <img 
                       src={event.images[0]} 
                       alt={event.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover filter blur-sm transition-all duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-white/90 rounded-full p-3 transform transition-transform duration-300 hover:scale-110">
+                        <ArrowRight className="w-6 h-6 text-blue-600" />
+                      </div>
+                    </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                       <h3 className="text-xl font-bold mb-1">{event.title}</h3>
                       <div className="flex items-center text-sm">
@@ -257,7 +262,7 @@ export default function EventsPage() {
               <img 
                 src={selectedEvent.images[currentImageIndex]} 
                 alt={`${selectedEvent.title} - ${currentImageIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain bg-gray-100"
               />
               <button 
                 onClick={closeModal}
