@@ -320,7 +320,7 @@ export default function HomePage() {
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                  src="/logos/xpsvideo.mp4"
                   title="XPS India Company Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
