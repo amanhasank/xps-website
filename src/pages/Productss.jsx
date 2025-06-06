@@ -136,13 +136,19 @@ export default function ProductsPage() {
                   <div className="space-y-4">
                     {selectedProduct.additionalImages ? (
                       <div className="grid grid-cols-2 gap-4">
+                        <div className="overflow-hidden rounded-lg">
+                          <img
+                            src={selectedProduct.image}
+                            alt={selectedProduct.name}
+                            className="w-full h-auto"
+                          />
+                        </div>
                         {selectedProduct.additionalImages.map((img, index) => (
-                          <div key={index} className="overflow-hidden rounded-lg border border-gray-200">
-                            <h6 className="text-center text-sm font-medium text-gray-700 mb-2">{img.title}</h6>
+                          <div key={index} className="overflow-hidden rounded-lg">
                             <img
                               src={img.image}
                               alt={img.title}
-                              className="h-48 w-full object-contain p-2"
+                              className="w-full h-auto"
                             />
                           </div>
                         ))}
@@ -151,16 +157,23 @@ export default function ProductsPage() {
                       <>
                         <div className="overflow-hidden rounded-lg">
                           <img
+                            src={selectedProduct.image}
+                            alt={selectedProduct.name}
+                            className="w-full h-auto"
+                          />
+                        </div>
+                        <div className="overflow-hidden rounded-lg">
+                          <img
                             src={selectedProduct.mainImage}
                             alt={selectedProduct.name}
-                            className="h-full w-full object-cover"
+                            className="w-full h-auto"
                           />
                         </div>
                         <div className="overflow-hidden rounded-lg">
                           <img
                             src={selectedProduct.technicalImage}
                             alt={`${selectedProduct.name} Technical Drawing`}
-                            className="h-full w-full object-cover"
+                            className="w-full h-auto"
                           />
                         </div>
                       </>

@@ -54,7 +54,7 @@ export default function CareersPage() {
               <div className="flex items-center space-x-3 text-gray-700">
                 <Phone className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 <a href="tel:+919254071600" className="hover:text-blue-600">
-                  +91 9254 071 600
+                  +91 9817907015
                 </a>
               </div>
 

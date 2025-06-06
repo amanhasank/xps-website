@@ -121,7 +121,7 @@ export default function Navigation() {
           </span>
           <span className="flex items-center space-x-1">
             <Phone className="w-4 h-4" />
-            <span>+91 - 9817907015</span>
+            <span>+91 - 9254012456</span>
           </span>
         </div>
         <div className="flex space-x-3">
@@ -345,7 +345,8 @@ export default function Navigation() {
                             {product.name}
                           </h3>
                           <p className="text-sm text-gray-400 mt-1 line-clamp-2">
-                            {product.description}
+                          {product.description}
+                          {product.description}
                           </p>
                         </div>
                       </div>
