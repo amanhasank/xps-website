@@ -70,30 +70,44 @@ export default function CareersPage() {
       </section>
 
       {/* Current Openings Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-blue-900">Current Openings</h2>
+      <section className="py-16 px-6 relative">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/logos/careers-3.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gray-900/70"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Current Openings</h2>
 
           <div className="space-y-8">
             {jobOpenings.map((job) => (
-              <div key={job.id} className="bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">{job.title}</h3>
+              <div key={job.id} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
                 <div className="mb-4">
-                  <h4 className="font-medium text-gray-700 mb-2">Locations:</h4>
-                  <p className="text-gray-600">{job.locations.join(', ')}</p>
+                  <h4 className="font-medium text-gray-200 mb-2">Locations:</h4>
+                  <p className="text-gray-300">{job.locations.join(', ')}</p>
                 </div>
                 <div className="mb-4">
-                  <h4 className="font-medium text-gray-700 mb-2">Requirements:</h4>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  <h4 className="font-medium text-gray-200 mb-2">Requirements:</h4>
+                  <ul className="list-disc list-inside text-gray-300 space-y-1">
                     {job.requirements.map((req, index) => (
                       <li key={index}>{req}</li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-4 mb-4">
-                  <p className="text-gray-700">
+                  <p className="text-gray-200">
                     Interested candidates can share their CVs at:{' '}
-                    <a href={`mailto:${job.contactEmail}`} className="text-blue-600 hover:text-blue-800">
+                    <a href={`mailto:${job.contactEmail}`} className="text-blue-300 hover:text-blue-100">
                       {job.contactEmail}
                     </a>
                   </p>

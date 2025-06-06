@@ -69,7 +69,7 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: Phone, text: "+91 9254012456" },
-    { icon: Mail, text: "info@xpsindia.com" },
+    { icon: Mail, text: "sales@xpsindia.com" },
     { icon: MapPin, text: "Xtra Precision Screws Private Limited 57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India" },
   ];
 

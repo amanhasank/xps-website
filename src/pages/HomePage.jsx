@@ -27,14 +27,30 @@ export default function HomePage() {
     <main>
       <HeroSlider />
       {/* Hero Section */}
-      <section className="bg-blue-50 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4 text-blue-900">Leading Manufacturer of High Tensile Fasteners in India</h1>
-        <p className="text-lg text-blue-800">Specialized in Nuts, Bolts, Screws, Socket Head, Allen Bolts & More</p>
-        <a href="/products">
-          <button className="mt-6 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
-            Explore Our Fastener Range
-          </button>
-        </a>
+      <section className="relative py-16 text-center">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/logos/test1.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-blue-900/50"></div>
+        </div>
+
+        <div className="relative z-10">
+          <h1 className="text-4xl font-bold mb-4 text-white">Leading Manufacturer of High Tensile Fasteners in India</h1>
+          <p className="text-lg text-gray-200">Specialized in Nuts, Bolts, Screws, Socket Head, Allen Bolts & More</p>
+          <a href="/products">
+            <button className="mt-6 bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded">
+              Explore Our Fastener Range
+            </button>
+          </a>
+        </div>
       </section>
 
       {/* About Section */}
@@ -49,9 +65,23 @@ export default function HomePage() {
       </section>
 
       {/* Company Introduction Section */}
-      <section className="py-12 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="space-y-6 text-gray-700">
+      <section className="py-12 px-6 relative">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/logos/test3.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gray-900/70"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="space-y-6 text-gray-200">
             <p className="leading-relaxed">
               We are pleased to introduce ourselves as the manufacturers of high tensile fasteners under the brand name of "XPS". 
               Our comprehensive range includes socket head cap screws, allen bolts, hex bolts, CSK screws, grub screws, and button head cap screws. 
@@ -219,11 +249,25 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="bg-blue-50 py-16">
-        <div className="container mx-auto px-6">
+      <section className="relative py-16">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source src="/logos/xpsvideo.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-blue-900/50"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <Fade triggerOnce={true}>
-            <h2 className="text-4xl font-bold text-center mb-4 text-blue-900">Premium Fastener Solutions</h2>
-            <p className="text-lg text-center text-blue-800 mb-12">High Tensile Fasteners, Nuts, Bolts, and Specialized Fastening Solutions</p>
+            <h2 className="text-4xl font-bold text-center mb-4 text-white">Premium Fastener Solutions</h2>
+            <p className="text-lg text-center text-gray-200 mb-12">High Tensile Fasteners, Nuts, Bolts, and Specialized Fastening Solutions</p>
           </Fade>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
