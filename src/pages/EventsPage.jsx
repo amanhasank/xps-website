@@ -14,17 +14,18 @@ const events = [
     ],
     description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
   },
-  // {
-  //   id: 2,
-  //   title: "India Warehousing Show 2025 - Mumbai",
-  //   location: "Bombay Exhibition Centre, Goregaon, Mumbai",
-  //   date: "20-22 Nov 2025",
-  //   booth: "Coming Soon",
-  //   images: [
-  //     "/events/warehousing-mumbai/ev1.png"
-  //   ],
-  //   description: "Visit us at the Mumbai edition of India Warehousing & Logistics Show 2025 to explore our innovative fastening solutions for the logistics sector."
-  // },
+  {
+    id: 2,
+    title: "India Prefab Expo 2025",
+    location: "Yashobhoomi IIC Dwarka, New Delhi",
+    date: "28-30 August 2025",
+    booth: "i10",
+    images: [
+      "/events/banner0.jpg"
+    ],
+    //description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
+    description: "Infinity Expo presents India Prefab Expo, 28–30 August 2025 at Yashobhoomi IIC, New Delhi. Explore the latest in steel prefab tech, connect with industry leaders, and join expert talks shaping the future of construction."
+  },
   {
     id: 3,
     title: "Aerodef 2025",
@@ -152,52 +153,54 @@ export default function EventsPage() {
           </Fade>
 
           {/* Featured Upcoming Events */}
-          <div className="max-w-4xl mx-auto mb-16">
-            {events.slice(0, 1).map((event, index) => (
-              <Fade key={event.id} triggerOnce delay={index * 100}>
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
-                  <div className="relative h-[400px] group">
-                    <img 
-                      src={event.images[0]} 
-                      alt={event.title}
-                      className="w-full h-full object-cover filter blur-sm transition-all duration-500 group-hover:blur-none"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{event.title}</h3>
-                      <div className="flex items-center space-x-6 mb-4">
-                        <div className="flex items-center">
-                          <Calendar className="w-6 h-6 mr-2" />
-                          <span className="text-lg">{event.date}</span>
+          <div className="max-w-7xl mx-auto mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {events.slice(0, 2).map((event, index) => (
+                <Fade key={event.id} triggerOnce delay={index * 100}>
+                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
+                    <div className="relative h-[400px] group">
+                      <img 
+                        src={event.images[0]} 
+                        alt={event.title}
+                        className="w-full h-full object-cover filter blur-sm transition-all duration-500 group-hover:blur-none"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{event.title}</h3>
+                        <div className="flex items-center space-x-6 mb-4">
+                          <div className="flex items-center">
+                            <Calendar className="w-6 h-6 mr-2" />
+                            <span className="text-lg">{event.date}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="w-6 h-6 mr-2" />
+                            <span className="text-lg">{event.location}</span>
+                          </div>
                         </div>
-                        <div className="flex items-center">
-                          <MapPin className="w-6 h-6 mr-2" />
-                          <span className="text-lg">{event.location}</span>
+                        <div className="bg-blue-600/90 inline-block px-4 py-2 rounded-lg mb-4">
+                          <span className="font-semibold">Booth: {event.booth}</span>
                         </div>
-                      </div>
-                      <div className="bg-blue-600/90 inline-block px-4 py-2 rounded-lg mb-4">
-                        <span className="font-semibold">Booth: {event.booth}</span>
-                      </div>
-                      <p className="text-lg mb-6">{event.description}</p>
-                      <button 
-                        onClick={() => openModal(event)}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg flex items-center text-lg transform transition-all duration-300 hover:scale-105 hover:translate-x-2 group"
-                      >
-                        <span className="relative overflow-hidden">
-                          <span className="block transition-transform duration-300 group-hover:-translate-y-full">
-                            View Details
+                        <p className="text-lg mb-6 line-clamp-3">{event.description}</p>
+                        <button 
+                          onClick={() => openModal(event)}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg flex items-center text-lg transform transition-all duration-300 hover:scale-105 hover:translate-x-2 group"
+                        >
+                          <span className="relative overflow-hidden">
+                            <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                              View Details
+                            </span>
+                            <span className="absolute top-0 left-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
+                              View Details
+                            </span>
                           </span>
-                          <span className="absolute top-0 left-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                            View Details
-                          </span>
-                        </span>
-                        <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
-                      </button>
+                          <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Fade>
-            ))}
+                </Fade>
+              ))}
+            </div>
           </div>
 
           {/* Past Events Section */}
