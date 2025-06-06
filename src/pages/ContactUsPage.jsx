@@ -81,7 +81,7 @@ export default function ContactUsPage() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
               </svg>
-              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9817907015</a>
+              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9254012456</a>
             </p>
             <p className="flex items-center text-gray-700 mt-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
@@ -118,7 +118,7 @@ export default function ContactUsPage() {
           <div className="flex flex-col space-y-4">
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/919817907015"
+              href="https://wa.me/919254012456"
               className="flex items-center justify-center py-3 px-6 rounded-md shadow-sm text-lg font-semibold text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
               target="_blank"
               rel="noopener noreferrer"
@@ -131,7 +131,7 @@ export default function ContactUsPage() {
 
             {/* Call Now Button (Visible on Mobile) */}
             <a
-              href="tel:+919817907015"
+              href="tel:+919254012456"
               className="md:hidden flex items-center justify-center py-3 px-6 rounded-md shadow-sm text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">

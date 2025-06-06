@@ -3,7 +3,7 @@ export const productCategories = [
     id: 1,
     name: 'SOCKET HEAD CAP SCREW',
     description: 'High-strength screws with a cylindrical head and hexagonal drive.',
-    image: '/products/bb1.png',
+    image: '/products/sockethead-1.jpg',
     mainImage: '/products/prd-1.png',
     technicalImage: '/products/prd-t.png',
     specifications: [
@@ -132,7 +132,7 @@ export const productCategories = [
     id: 8,
     name: 'SPECIAL FASTENERS',
     description: 'Custom-engineered fasteners designed for specific applications.',
-    image: '/products/bb8.png',
+    image: '/products/special.png',
     mainImage: '/products/sp1.jpg',
     technicalImage: '/products/sp5.png',
     additionalImages: [
