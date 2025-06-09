@@ -23,11 +23,57 @@ const events = [
     images: [
       "/events/banner0.jpg"
     ],
-    //description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
     description: "Infinity Expo presents India Prefab Expo, 28–30 August 2025 at Yashobhoomi IIC, New Delhi. Explore the latest in steel prefab tech, connect with industry leaders, and join expert talks shaping the future of construction."
   },
   {
     id: 3,
+    title: "Automec 2025",
+    location: "Sao Paulo, Brazil",
+    date: "2025",
+    images: [
+      "/events/auto-expo/ab1.jpeg",
+      "/events/auto-expo/ab2.jpeg",
+      "/events/auto-expo/ab3.jpeg",
+      "/events/auto-expo/ab4.jpeg",
+      "/events/auto-expo/ab5.jpeg",
+      "/events/auto-expo/ab6.jpeg"
+
+    ],
+    description: "Join us at Automec 2025, South America's premier automotive trade show. We'll be showcasing our innovative automotive fastening solutions and connecting with industry leaders."
+  },
+  {
+    id: 4,
+    title: "IMTOF 2024",
+    location: "Chennai, Tamil Nadu",
+    date: "2024",
+    images: [
+      "/events/auto-expo/bc1.jpeg",
+      "/events/auto-expo/bc2.jpeg",
+      "/events/auto-expo/bc3.jpeg",
+      "/events/auto-expo/bc4.jpeg",
+      "/events/auto-expo/bc5.jpeg",
+      "/events/auto-expo/bc6.jpeg",
+      "/events/auto-expo/bc7.jpeg",
+      "/events/auto-expo/bc8.jpeg"
+
+    ],
+    description: "Visit us at IMTOF 2024, where we'll present our latest innovations in tooling and manufacturing technology. Connect with industry experts and explore new opportunities."
+  },
+  {
+    id: 5,
+    title: "Excon 2024",
+    location: "Bangalore, Karnataka",
+    date: "2024",
+    images: [
+      "/events/auto-expo/cd1.jpeg",
+      "/events/auto-expo/cd2.jpeg",
+      "/events/auto-expo/cd3.jpeg",
+      "/events/auto-expo/cd4.jpeg"
+    ],
+    description: "Experience our construction equipment solutions at Excon 2024. We'll showcase our specialized fasteners and components designed for heavy machinery and construction applications."
+  },
+  {
+    id: 6,
     title: "Aerodef 2025",
     location: "Yashobhoomi, Dwarka, New Delhi",
     date: "2025",
@@ -40,7 +86,7 @@ const events = [
     description: "Join us at Aerodef 2025, India's premier aerospace and defense exhibition. We'll be showcasing our high-tensile fasteners and specialized aerospace components."
   },
   {
-    id: 4,
+    id: 7,
     title: "Fastener Fair Global 2025",
     location: "Stuttgart, Germany",
     date: "2025",
@@ -53,7 +99,7 @@ const events = [
     description: "Visit us at the world's leading exhibition for the fastener and fixing industry. Experience our latest innovations in fastener technology."
   },
   {
-    id: 5,
+    id: 8,
     title: "Bauma CONEXPO 2024",
     location: "India Exposition Mart, Greater Noida, Uttar Pradesh",
     date: "2024",
@@ -67,7 +113,7 @@ const events = [
     description: "Meet us at Bauma CONEXPO India, the leading construction equipment trade fair. Discover our construction-grade fasteners and solutions."
   },
   {
-    id: 6,
+    id: 9,
     title: "Auto Expo - The Components Show 2025",
     location: "Yashobhoomi, Dwarka, New Delhi",
     date: "2023",
