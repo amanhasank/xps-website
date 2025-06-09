@@ -259,7 +259,7 @@ export default function HomePage() {
             playsInline
             className="absolute w-full h-full object-cover"
           >
-            <source src="/logos/xpsvideo.mp4" type="video/mp4" />
+            <source src="https://firebasestorage.googleapis.com/v0/b/connectme-e3fef.appspot.com/o/xpsvideo.mp4?alt=media&token=0543e109-fb58-464a-a77b-4916c5eabfa0" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-blue-900/50"></div>
         </div>
@@ -364,7 +364,7 @@ export default function HomePage() {
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F42777D1108E0BE04%21s21b32e830d224929bb27e21fc451e91b%3Fithint%3Dvideo%26e%3D5X8yjb%26migratedtospo%3Dtrue&sw=bypassConfig&cid=42777D1108E0BE04&id=42777D1108E0BE04%21s21b32e830d224929bb27e21fc451e91b&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy80Mjc3N2QxMTA4ZTBiZTA0L0VZTXVzeUVpRFNsSnV5ZmlIOFJSNlJzQmpxeF9Mc2c5LUhYa19jNWR3cFo0cEE%5FZT01WDh5amI&v=photos"
+                  src="https://firebasestorage.googleapis.com/v0/b/connectme-e3fef.appspot.com/o/xpsvideo.mp4?alt=media&token=0543e109-fb58-464a-a77b-4916c5eabfa0"
                   title="XPS India Company Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
