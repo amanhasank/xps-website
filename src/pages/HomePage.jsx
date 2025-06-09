@@ -364,7 +364,7 @@ export default function HomePage() {
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="/logos/xpsvideo.mp4"
+                  src="https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F42777D1108E0BE04%21s21b32e830d224929bb27e21fc451e91b%3Fithint%3Dvideo%26e%3D5X8yjb%26migratedtospo%3Dtrue&sw=bypassConfig&cid=42777D1108E0BE04&id=42777D1108E0BE04%21s21b32e830d224929bb27e21fc451e91b&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy80Mjc3N2QxMTA4ZTBiZTA0L0VZTXVzeUVpRFNsSnV5ZmlIOFJSNlJzQmpxeF9Mc2c5LUhYa19jNWR3cFo0cEE%5FZT01WDh5amI&v=photos"
                   title="XPS India Company Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -10,7 +10,7 @@ export default function HomePage() {
         <div className="flex space-x-4 items-center">
           <span className="flex items-center space-x-1">
             <Mail className="w-4 h-4" />
-            <span>sales@xpsssindia.com</span>
+            <span>sales@xpsindia.com</span>
           </span>
           <span className="flex items-center space-x-1">
             <Phone className="w-4 h-4" />
