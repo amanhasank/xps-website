@@ -170,7 +170,7 @@ export default function Navigation() {
                 onMouseLeave={() => setIsProductsOpen(false)}
                 style={{ zIndex: 1000 }}
               >
-                <div className="py-2">
+                <div className="py-2 max-h-[80vh] overflow-y-auto">
                   {products.map((product, index) => (
                     <Fade 
                       key={product.id} 
@@ -182,7 +182,10 @@ export default function Navigation() {
                       <Link
                         to={`/products?product=${product.id}`}
                         className="block px-4 py-3 hover:bg-gray-900 transition-all duration-200 group"
-                        onClick={() => setIsProductsOpen(false)}
+                        onClick={() => {
+                          setIsProductsOpen(false);
+                          toggleMobileMenu();
+                        }}
                       >
                         <div className="flex items-center space-x-4">
                           <div className="w-16 h-16 flex-shrink-0">
@@ -315,7 +318,7 @@ export default function Navigation() {
               onMouseLeave={() => setIsProductsOpen(false)}
               style={{ zIndex: 1000 }}
             >
-              <div className="py-2">
+              <div className="py-2 max-h-[80vh] overflow-y-auto">
                 {products.map((product, index) => (
                   <Fade 
                     key={product.id} 
@@ -345,8 +348,7 @@ export default function Navigation() {
                             {product.name}
                           </h3>
                           <p className="text-sm text-gray-400 mt-1 line-clamp-2">
-                          {product.description}
-                          {product.description}
+                            {product.description}
                           </p>
                         </div>
                       </div>
