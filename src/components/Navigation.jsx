@@ -139,7 +139,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img src="/logo.png" alt="XPS India Logo" className="h-10 w-auto" />
-            <span className="text-xl md:text-2xl font-bold text-blue-400 hidden sm:inline">Xtra Precision Screws</span>
+            <span className="text-xl md:text-2xl font-bold text-blue-400">Xtra Precision Screws</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -286,7 +286,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center px-4 py-3 shadow-lg bg-gray-800">
           <div className="flex items-center space-x-3">
             <img src="/logo.png" alt="XPS India Logo" className="h-10 w-auto" />
-            <span className="text-xl font-bold text-blue-400">XPS INDIA</span>
+            <span className="text-xl font-bold text-blue-400">Xtra Precision Screws</span>
           </div>
           <button onClick={toggleMobileMenu} className="text-gray-300 hover:text-blue-400 focus:outline-none">
             <X className="w-6 h-6" />
