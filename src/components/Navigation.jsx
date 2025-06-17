@@ -139,7 +139,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img src="/logo.png" alt="XPS India Logo" className="h-10 w-auto" />
-            <span className="text-xl md:text-2xl font-bold text-blue-400">Xtra Precision Screws</span>
+            <span className="text-lg md:text-xl font-bold text-blue-400">Xtra Precision Screws</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -265,6 +265,7 @@ export default function Navigation() {
             <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Plant Gallery</NavLink>
             <NavLink to="/csr" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>CSR</NavLink>
             <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Careers</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>About Us</NavLink>
             <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Contact Us</NavLink>
           </nav>
 
@@ -373,6 +374,7 @@ export default function Navigation() {
           <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Plant Gallery</NavLink>
           <NavLink to="/csr" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>CSR</NavLink>
           <NavLink to="/careers" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Careers</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>About Us</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Contact Us</NavLink>
         </nav>
       </div>

@@ -10,6 +10,7 @@ import IndustryPage from './pages/IndustryPage';
 import EventsPage from './pages/EventsPage';
 import PlantGalleryPage from './pages/PlantGalleryPage';
 import ManufacturingPage from './pages/ManufacturingPage';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/gallery" element={<PlantGalleryPage />} />
           <Route path="/manufacturing" element={<ManufacturingPage />} />
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </Layout>
     </Router>
