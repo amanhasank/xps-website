@@ -23,7 +23,7 @@ export default function CareersPage() {
       >
         <div className="absolute inset-0 bg-black/50"></div> {/* Overlay */}
         <div className="relative z-10 text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg animate-fadeInDownCareers">Career & CSR</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg animate-fadeInDownCareers">Careers</h1>
           <p className="text-xl md:text-2xl font-semibold drop-shadow-lg animate-fadeInUpCareers" style={{ animationDelay: '0.2s' }}>Join Our Team at XPS India</p>
         </div>
       </section>

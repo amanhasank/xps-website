@@ -37,7 +37,7 @@ export default function HomePage() {
             playsInline
             className="absolute w-full h-full object-cover"
           >
-            <source src="/logos/test1.mp4" type="video/mp4" />
+            <source src="/logos/tes.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-blue-900/50"></div>
         </div>

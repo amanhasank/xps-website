@@ -25,7 +25,9 @@ export default function ManufacturingPage() {
 
 Wire Drawing is carried out to get the required wire size for cold forging the parts depending upon the size of fasteners to be manufactured. Each lot is identified with a unique heat number. The lots are 100% checked for chemical composition (by Spectrometer), metallurgical & mechanical Properties. All records are maintained and can be provided on demand.`,
       images: [
-        '/manufacturing/raw.png'
+        '/manufacturing/raw.png',
+        '/manufacturing/DSC_8435.jpg',
+        '/manufacturing/DSC_8434.jpg'
       ],
       specifications: [
         {
@@ -68,7 +70,9 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
         '/manufacturing/coldf.png',
         '/manufacturing/cold1.png',
         '/manufacturing/cold2.png',
-        '/manufacturing/cold.png'
+        '/manufacturing/cold.png',
+        '/manufacturing/DSC_8432.jpg',
+        '/manufacturing/DSC_8430.jpg'
       ],
       specifications: [
         {
@@ -89,7 +93,8 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
         '/manufacturing/s3.jpg',
         '/manufacturing/s5.jpg',
         '/manufacturing/s1.png',
-        '/manufacturing/s4.jpg'
+        '/manufacturing/s4.jpg',
+        '/manufacturing/DSC_8230.jpg'
       ],
       specifications: [
         {
@@ -109,7 +114,8 @@ The Heat Treatment Department conducts hardening and tempering to ensure that th
 
 At XPS, heavy investment has been done to install the latest and state of the art continuous furnace to ensure that the desired results are achieved every time. Regular maintenance and check-ups are done to maintain the same quality. All the data are stored and can be shown on demand.`,
       images: [
-        '/manufacturing/heattreatment.jpeg'
+        '/manufacturing/heattreatment.jpeg',
+        '/manufacturing/ DSC_8195.jpg' 
       ],
       specifications: [
         {
@@ -158,7 +164,9 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
       images: [
         '/manufacturing/quality.png',
         '/manufacturing/arrow.png',
-        '/manufacturing/arrow2.png'
+        '/manufacturing/arrow2.png',
+        '/manufacturing/DSC_8517.jpg',
+        '/manufacturing/DSC_8508.jpg'
       ],
       specifications: [
         {
