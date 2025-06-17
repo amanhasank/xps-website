@@ -68,7 +68,7 @@ export default function AboutUs() {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Our Leadership</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Our Leaders</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             {/* Director Card */}
@@ -94,8 +94,12 @@ export default function AboutUs() {
                   onClick={() => openModal(director.image)}
                 >
                   <div className="relative w-48 h-48 rounded-full overflow-hidden mb-4 shadow-lg">
-                    <img src={director.image} alt={director.name} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition duration-300 flex items-center justify-center">
+                    <img
+                      src={director.image}
+                      alt={director.name}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                       <span className="text-white opacity-0 hover:opacity-100 transition-opacity text-sm">View Full Image</span>
                     </div>
                   </div>
