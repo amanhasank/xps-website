@@ -17,7 +17,7 @@ const slides = [
     image: "/slide2.jpeg",
     typedStrings: [
       "Quality and Precision",
-      "Certified and Trusted."
+      
     ],
     subtitle: "Delivering excellence for 50+ years",
   },
@@ -27,6 +27,13 @@ const slides = [
       "Innovation in Fasteners"
     ],
     subtitle: "Custom solutions for every need",
+  },
+  {
+    image: "/slide4.jpg",
+    typedStrings: [
+      "Certified and Trusted."
+    ],
+    subtitle: "",
   },
 ];
 
