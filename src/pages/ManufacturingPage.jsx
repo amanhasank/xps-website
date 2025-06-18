@@ -115,7 +115,7 @@ The Heat Treatment Department conducts hardening and tempering to ensure that th
 At XPS, heavy investment has been done to install the latest and state of the art continuous furnace to ensure that the desired results are achieved every time. Regular maintenance and check-ups are done to maintain the same quality. All the data are stored and can be shown on demand.`,
       images: [
         '/manufacturing/heattreatment.jpeg',
-        '/manufacturing/ DSC_8195.jpg' 
+        '/manufacturing/DSC_8195.jpg' 
       ],
       specifications: [
         {

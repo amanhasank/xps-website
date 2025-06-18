@@ -28,20 +28,9 @@ export default function HomePage() {
       <HeroSlider />
       {/* Hero Section */}
       <section className="relative py-16 text-center">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute w-full h-full object-cover"
-          >
-            <source src="/logos/tes.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-blue-900/50"></div>
-        </div>
-
+        {/* Light-Dark-Light-Dark Gradient Background */}
+        <div className="absolute inset-0 w-full h-full z-0 bg-gradient-to-r from-blue-100 via-blue-900 via-30% via-blue-100 via-60% to-blue-900"></div>
+        <div className="absolute inset-0 bg-blue-900/50"></div>
         <div className="relative z-10">
           <h1 className="text-4xl font-bold mb-4 text-white">Leading Manufacturer of High Tensile Fasteners in India</h1>
           <p className="text-lg text-gray-200">Specialized in Nuts, Bolts, Screws, Socket Head, Allen Bolts & More</p>
