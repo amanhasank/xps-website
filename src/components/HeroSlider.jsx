@@ -8,8 +8,7 @@ const slides = [
   {
     image: "/slide1.jpeg",
     typedStrings: [
-      "XPS - Biggest Manufacturer",
-      "One Stop"
+      "We put in Xtra efforts, that's how we stand out !",
     ],
     subtitle: "High-tensile fasteners for every industry",
   },
@@ -30,6 +29,20 @@ const slides = [
   },
   {
     image: "/slide4.jpg",
+    typedStrings: [
+      "Certified and Trusted."
+    ],
+    subtitle: "",
+  },
+  {
+    image: "/slide5.jpg",
+    typedStrings: [
+      "Strength is our second name."
+    ],
+    subtitle: "",
+  },
+  {
+    image: "/slide6.jpg",
     typedStrings: [
       "Certified and Trusted."
     ],
