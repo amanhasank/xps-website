@@ -21,7 +21,7 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto">
 
         {/* Hero Section */}
-        <div className="relative h-[33vh] md:h-[40vh] w-full bg-cover bg-center mb-12 rounded-lg shadow-lg overflow-hidden" style={{ backgroundImage: `url('/logo.png')` }}>
+        <div className="relative h-[33vh] md:h-[40vh] w-full bg-cover bg-center mb-12 rounded-lg shadow-lg overflow-hidden" style={{ backgroundImage: `url('/slide6.jpg')` }}>
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
