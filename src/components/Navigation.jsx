@@ -104,7 +104,6 @@ const industries = [
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
-  const [isIndustryOpen, setIsIndustryOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -196,9 +195,6 @@ export default function Navigation() {
                             <h3 className="text-gray-200 font-semibold group-hover:text-blue-400 transition-colors duration-200">
                               {product.name}
                             </h3>
-                            <p className="text-sm text-gray-400 mt-1 line-clamp-2">
-                              {product.description}
-                            </p>
                           </div>
                         </div>
                       </Link>
@@ -208,59 +204,7 @@ export default function Navigation() {
               </div>
             </div>
             <NavLink to="/manufacturing" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Manufacturing</NavLink>
-            <div className="relative">
-              <Link
-                to="/industry"
-                onMouseEnter={() => setIsIndustryOpen(true)}
-                onMouseLeave={() => setIsIndustryOpen(false)}
-                className="text-gray-300 hover:text-blue-400 focus:outline-none py-2 flex items-center"
-              >
-                Industry
-                <svg 
-                  className={`w-4 h-4 ml-1 transition-transform duration-200 ${isIndustryOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </Link>
-              <div 
-                className={`absolute left-0 top-full pt-2 w-64 bg-gray-700 rounded-lg shadow-xl overflow-hidden transition-all duration-300 transform origin-top ${
-                  isIndustryOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
-                }`}
-                onMouseEnter={() => setIsIndustryOpen(true)}
-                onMouseLeave={() => setIsIndustryOpen(false)}
-                style={{ zIndex: 1000 }}
-              >
-                <div className="py-2">
-                  {industries.map((industry, index) => (
-                    <Fade 
-                      key={industry.id} 
-                      triggerOnce 
-                      delay={index * 50}
-                      direction="up"
-                      duration={300}
-                    >
-                      <Link
-                        to={industry.path}
-                        className="block px-4 py-3 hover:bg-gray-900 transition-all duration-200 group"
-                        onClick={() => setIsIndustryOpen(false)}
-                      >
-                        <div className="flex-1">
-                          <h3 className="text-gray-200 font-semibold group-hover:text-blue-400 transition-colors duration-200">
-                            {industry.name}
-                          </h3>
-                          <p className="text-sm text-gray-400 mt-1 line-clamp-2">
-                            {industry.description}
-                          </p>
-                        </div>
-                      </Link>
-                    </Fade>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Industry</NavLink>
             <NavLink to="/events" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Events & Media</NavLink>
             <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Plant Gallery</NavLink>
             <NavLink to="/csr" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>CSR</NavLink>
@@ -326,50 +270,23 @@ export default function Navigation() {
                       toggleMobileMenu();
                     }}
                   >
-                    {product.name}
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 flex-shrink-0">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-cover rounded"
+                        />
+                      </div>
+                      <span>{product.name}</span>
+                    </div>
                   </Link>
                 ))}
               </div>
             </div>
           </div>
           <NavLink to="/manufacturing" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Manufacturing</NavLink>
-          <div className="relative">
-            <button
-              onClick={() => setIsIndustryOpen(!isIndustryOpen)}
-              className="w-full text-left text-gray-300 hover:text-blue-400 focus:outline-none py-2 flex items-center justify-between"
-            >
-              Industry
-              <svg 
-                className={`w-4 h-4 transition-transform duration-200 ${isIndustryOpen ? 'rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            <div 
-              className={`overflow-hidden transition-all duration-300 ${
-                isIndustryOpen ? 'max-h-[500px]' : 'max-h-0'
-              }`}
-            >
-              <div className="py-2 space-y-2">
-                {industries.map((industry) => (
-                  <Link
-                    key={industry.id}
-                    to={industry.path}
-                    className="block px-4 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded"
-                    onClick={() => {
-                      setIsIndustryOpen(false);
-                      toggleMobileMenu();
-                    }}
-                  >
-                    {industry.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+          <NavLink to="/industry" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Industry</NavLink>
           <NavLink to="/events" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Events & Media</NavLink>
           <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>Plant Gallery</NavLink>
           <NavLink to="/csr" className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"} onClick={toggleMobileMenu}>CSR</NavLink>

@@ -73,13 +73,13 @@ export default function AboutUs() {
 
             {/* Director Card */}
             {[{
-              name: 'Sourabh Jain',
-              role: 'Director Production and Finance',
-              image: '/sourabh.jpeg'
-            }, {
               name: 'Nikhlesh Jain',
               role: 'Director Sales and Marketing',
               image: '/nikhlesh.jpeg'
+            },{
+              name: 'Saurabh Jain',
+              role: 'Director Production and Finance',
+              image: '/sourabh.jpeg'
             }].map((director, idx) => (
               <Tilt
                 glareEnable={true}

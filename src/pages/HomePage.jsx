@@ -242,7 +242,6 @@ export default function HomePage() {
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full z-0">
           <video
-            autoPlay
             loop
             muted
             playsInline
