@@ -44,7 +44,7 @@ const slides = [
   {
     image: "/slide6.jpg",
     typedStrings: [
-      "Certified and Trusted."
+      "No ifs no buts only bolts and nuts."
     ],
     subtitle: "",
   },
