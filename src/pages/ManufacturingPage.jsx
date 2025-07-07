@@ -175,6 +175,17 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
           value: '100% TESTING & CERTIFICATION'
         }
       ]
+    },
+    {
+      id: 8,
+      title: 'PACKING AND DISTRIBUTION',
+      description: 'To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.',
+      image: '/slide4.jpg',
+      detailedDescription: `To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.`,
+      images: [
+        '/slide4.jpg'
+      ],
+      specifications: []
     }
   ];
 
@@ -247,63 +258,153 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
               ></div>
             </div>
 
-            {manufacturingProcesses.map((process, index) => (
-              <Fade 
-                key={process.id} 
-                direction={index % 2 === 0 ? "left" : "right"}
-                triggerOnce={true}
-                className="relative"
-              >
-                <div className="flex flex-col md:flex-row items-center gap-8 py-12 px-6 my-8 group">
-                  {/* Step Number */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block hidden">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
-                      {process.id}
-                    </div>
-                  </div>
-
-                  {/* Process Card */}
-                  <div
-                    className={`w-full md:w-5/6 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
-                    onClick={() => openModal(process)}
-                    style={{
-                      background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                    }}
-                  >
-                    <div className="flex flex-col md:flex-row gap-6 p-6">
-                      {/* Image Section */}
-                      <div className="w-full md:w-1/3 relative overflow-hidden rounded-lg">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <img
-                          src={process.image}
-                          alt={process.title}
-                          className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
-                        </div>
-                      </div>
-
-                      {/* Content Section */}
-                      <div className="w-full md:w-2/3">
-                        <div className="flex items-center gap-4 mb-4 md:hidden">
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                            {process.id}
+            {/* Render all processes except HOT FORGING and COLD FORGING */}
+            {manufacturingProcesses.map((process, index) => {
+              // HOT FORGING (id:2) and COLD FORGING (id:3) will be handled together
+              if (process.id === 2) {
+                // Render HOT FORGING and COLD FORGING in parallel
+                const hotForging = process;
+                const coldForging = manufacturingProcesses.find(p => p.id === 3);
+                if (!hotForging || !coldForging) return null;
+                return (
+                  <Fade key="hot-cold-forging" direction="up" triggerOnce={true} className="relative">
+                    <div className="flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 my-8 group">
+                      {/* HOT FORGING */}
+                      <div className="flex-1">
+                        {/* Process Card */}
+                        <div
+                          className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                          onClick={() => openModal(hotForging)}
+                          style={{
+                            background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
+                          }}
+                        >
+                          <div className="flex flex-col gap-6 p-6">
+                            {/* Image Section */}
+                            <div className="w-full relative overflow-hidden rounded-lg">
+                              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              <img
+                                src={hotForging.image}
+                                alt={hotForging.title}
+                                className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                              </div>
+                            </div>
+                            {/* Content Section */}
+                            <div className="w-full">
+                              <h2 className="text-2xl font-semibold text-blue-900 mb-4">{hotForging.title}</h2>
+                              <p className="text-gray-700 leading-relaxed mb-6">{hotForging.description}</p>
+                              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                Learn More
+                                <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+                              </button>
+                            </div>
                           </div>
-                          <h2 className="text-2xl font-semibold text-blue-900">{process.title}</h2>
                         </div>
-                        <h2 className="text-2xl font-semibold text-blue-900 mb-4 hidden md:block">{process.title}</h2>
-                        <p className="text-gray-700 leading-relaxed mb-6">{process.description}</p>
-                        <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                          Learn More
-                          <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                        </button>
+                      </div>
+                      {/* COLD FORGING */}
+                      <div className="flex-1">
+                        {/* Process Card */}
+                        <div
+                          className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                          onClick={() => openModal(coldForging)}
+                          style={{
+                            background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
+                          }}
+                        >
+                          <div className="flex flex-col gap-6 p-6">
+                            {/* Image Section */}
+                            <div className="w-full relative overflow-hidden rounded-lg">
+                              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              <img
+                                src={coldForging.image}
+                                alt={coldForging.title}
+                                className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                              </div>
+                            </div>
+                            {/* Content Section */}
+                            <div className="w-full">
+                              <h2 className="text-2xl font-semibold text-blue-900 mb-4">{coldForging.title}</h2>
+                              <p className="text-gray-700 leading-relaxed mb-6">{coldForging.description}</p>
+                              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                Learn More
+                                <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Fade>
+                );
+              }
+              // Skip rendering COLD FORGING here (handled above)
+              if (process.id === 3) return null;
+              // Render all other processes as before
+              return (
+                <Fade 
+                  key={process.id} 
+                  direction={index % 2 === 0 ? "left" : "right"}
+                  triggerOnce={true}
+                  className="relative"
+                >
+                  <div className="flex flex-col md:flex-row items-center gap-8 py-12 px-6 my-8 group">
+                    {/* Step Number */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block hidden">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
+                        {process.id}
+                      </div>
+                    </div>
+
+                    {/* Process Card */}
+                    <div
+                      className={`w-full md:w-5/6 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                      onClick={() => openModal(process)}
+                      style={{
+                        background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
+                      }}
+                    >
+                      <div className="flex flex-col md:flex-row gap-6 p-6">
+                        {/* Image Section */}
+                        <div className="w-full md:w-1/3 relative overflow-hidden rounded-lg">
+                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <img
+                            src={process.image}
+                            alt={process.title}
+                            className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                          </div>
+                        </div>
+
+                        {/* Content Section */}
+                        <div className="w-full md:w-2/3">
+                          <div className="flex items-center gap-4 mb-4 md:hidden">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                              {process.id}
+                            </div>
+                            <h2 className="text-2xl font-semibold text-blue-900">{process.title}</h2>
+                          </div>
+                          <h2 className="text-2xl font-semibold text-blue-900 mb-4 hidden md:block">{process.title}</h2>
+                          <p className="text-gray-700 leading-relaxed mb-6">{process.description}</p>
+                          <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                            onClick={e => { e.stopPropagation(); openModal(process); }}>
+                            Learn More
+                            <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Fade>
-            ))}
+                </Fade>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -356,7 +457,7 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                   </h2>
                   
                   {/* Specifications */}
-                  {selectedProcess.specifications && (
+                  {selectedProcess.specifications && selectedProcess.specifications.length > 0 && (
                     <div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-md">
                       <div className="flex justify-between items-center">
                         <span className="font-semibold text-gray-700">{selectedProcess.specifications[0].title}</span>
