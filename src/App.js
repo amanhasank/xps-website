@@ -11,6 +11,7 @@ import EventsPage from './pages/EventsPage';
 import PlantGalleryPage from './pages/PlantGalleryPage';
 import ManufacturingPage from './pages/ManufacturingPage';
 import AboutUs from './pages/AboutUs';
+import CertificationsPage from './pages/CertificationsPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/gallery" element={<PlantGalleryPage />} />
           <Route path="/manufacturing" element={<ManufacturingPage />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
         </Routes>
       </Layout>
     </Router>

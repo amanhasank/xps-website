@@ -3,7 +3,7 @@ export const productCategories = [
     id: 1,
     name: 'SOCKET HEAD CAP SCREW',
     description: 'High-strength screws with a cylindrical head and hexagonal drive.',
-    image: '/products/sockethead-1.jpg',
+    image: '/products/sockethead-1.png',
     mainImage: '/products/prd-1.png',
     technicalImage: '/products/prd-t.png',
     specifications: [
