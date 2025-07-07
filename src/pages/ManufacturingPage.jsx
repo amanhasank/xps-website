@@ -355,7 +355,7 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                 >
                   <div className="flex flex-col md:flex-row items-center gap-8 py-12 px-6 my-8 group">
                     {/* Step Number */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:block hidden">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
                       <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-xl shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl">
                         {process.id}
                       </div>
@@ -386,9 +386,6 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                         {/* Content Section */}
                         <div className="w-full md:w-2/3">
                           <div className="flex items-center gap-4 mb-4 md:hidden">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                              {process.id}
-                            </div>
                             <h2 className="text-2xl font-semibold text-blue-900">{process.title}</h2>
                           </div>
                           <h2 className="text-2xl font-semibold text-blue-900 mb-4 hidden md:block">{process.title}</h2>
