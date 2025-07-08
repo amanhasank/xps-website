@@ -142,14 +142,19 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex gap-x-6 text-sm font-medium items-center overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+          <nav className="hidden lg:flex space-x-6 text-sm font-medium items-center">
             <NavLink to="/" end className={({ isActive }) => isActive ? "text-blue-400 font-semibold" : "text-gray-300 hover:text-blue-400"}>Home</NavLink>
-            <div className="relative">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsProductsOpen(true)}
+              onMouseLeave={() => setIsProductsOpen(false)}
+            >
               <Link
                 to="/products"
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
                 className="text-gray-300 hover:text-blue-400 focus:outline-none py-2 flex items-center"
+                tabIndex={0}
+                // onFocus={() => setIsProductsOpen(true)}
+                // onBlur={() => setIsProductsOpen(false)}
               >
                 Products
                 <svg 
@@ -161,13 +166,8 @@ export default function Navigation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
-              <div 
-                className={`absolute left-0 top-full pt-2 w-96 bg-gray-700 rounded-lg shadow-xl overflow-hidden transition-all duration-300 transform origin-top ${
-                  isProductsOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
-                }`}
-                onMouseEnter={() => setIsProductsOpen(true)}
-                onMouseLeave={() => setIsProductsOpen(false)}
-                style={{ zIndex: 1000 }}
+              <div
+                className={`absolute left-0 top-full pt-2 w-96 bg-gray-700 rounded-lg shadow-xl overflow-hidden transition-all duration-300 origin-top z-[9999] ${isProductsOpen ? 'block' : 'hidden'}`}
               >
                 <div className="py-2 max-h-[80vh] overflow-y-auto">
                   {products.map((product, index) => (
