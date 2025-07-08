@@ -10,6 +10,12 @@ const certifications = [
   { src: '/logos/rohs.png', title: 'ROHS', subtitle: 'Compliance', alt: 'ROHS Compliant' },
 ];
 
+const bisCertifications = [
+  { src: '/logos/bis1.png', title: 'BIS', subtitle: 'Certification 1', alt: 'BIS Certification 1' },
+  { src: '/logos/bis2.png', title: 'BIS', subtitle: 'Certification 2', alt: 'BIS Certification 2' },
+  { src: '/logos/bis3.png', title: 'BIS', subtitle: 'Certification 3', alt: 'BIS Certification 3' },
+];
+
 const CertificationsPage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalImg, setModalImg] = useState('');
@@ -57,6 +63,31 @@ const CertificationsPage = () => {
         </div>
       </div>
 
+      {/* BIS Certifications - Centered */}
+      <div className="max-w-3xl mx-auto mt-16">
+        <Fade triggerOnce>
+          <h3 className="text-2xl font-bold text-center text-blue-700 mb-8">BIS Certifications</h3>
+        </Fade>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {bisCertifications.map((cert, index) => (
+            <Fade key={index} triggerOnce delay={index * 100}>
+              <div
+                className="bg-white hover:shadow-xl transition-transform transform hover:scale-105 rounded-xl p-6 flex flex-col items-center border border-gray-200 cursor-pointer"
+                onClick={() => openModal(cert.src, cert.alt)}
+              >
+                <img
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="w-20 h-20 object-contain mb-4 transition duration-300"
+                />
+                <div className="text-2xl font-bold text-blue-600 mb-1">{cert.title}</div>
+                <div className="text-sm text-gray-600 text-center">{cert.subtitle}</div>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </div>
+
       {/* Modal */}
       {modalOpen && (
         <div
@@ -77,9 +108,8 @@ const CertificationsPage = () => {
             <img
               src={modalImg}
               alt={modalAlt}
-              className="w-full h-64 object-contain mb-4"
+              className="w-full h-auto max-h-[80vh] object-contain"
             />
-            <div className="text-xl font-semibold text-center text-blue-800">{modalAlt}</div>
           </div>
         </div>
       )}

@@ -3,17 +3,17 @@ import { Fade } from 'react-awesome-reveal';
 import { Calendar, MapPin, ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const events = [
-  {
-    id: 1,
-    title: "India Warehousing Show 2025",
-    location: "Yashobhoomi, IICC, Dwarka, New Delhi, India",
-    date: "26-28 June 2025",
-    booth: "Stall #A59",
-    images: [
-      "/events/warehousing/ev1.png"
-    ],
-    description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
-  },
+  // {
+  //   id: 1,
+  //   title: "India Warehousing Show 2025",
+  //   location: "Yashobhoomi, IICC, Dwarka, New Delhi, India",
+  //   date: "26-28 June 2025",
+  //   booth: "Stall #A59",
+  //   images: [
+  //     "/events/warehousing/ev1.png"
+  //   ],
+  //   description: "Join us at the India Warehousing & Logistics Show 2025, where we'll showcase our specialized fastening solutions for the warehousing and logistics industry."
+  // },
   {
     id: 2,
     title: "India Prefab Expo 2025",
@@ -201,7 +201,7 @@ export default function EventsPage() {
           {/* Featured Upcoming Events */}
           <div className="max-w-7xl mx-auto mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {events.slice(0, 2).map((event, index) => (
+              {events.slice(0, 1).map((event, index) => (
                 <Fade key={event.id} triggerOnce delay={index * 100}>
                   <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
                     <div className="relative h-[400px] group">

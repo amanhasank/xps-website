@@ -53,7 +53,7 @@ const Footer = () => {
     },
     { 
       icon: Instagram, 
-      href: "https://instagram.com", 
+      href: "https://www.instagram.com/xtraprecisionscrews?igsh=MXRkMjN1c3UxZ3l4Yw==", 
       label: "Instagram",
       color: "hover:text-pink-500",
       bgColor: "hover:bg-white/10"

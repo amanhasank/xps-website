@@ -178,7 +178,7 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
     },
     {
       id: 8,
-      title: 'PACKING AND DISTRIBUTION',
+      title: 'PACKING AND DISPATCH',
       description: 'To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.',
       image: '/slide4.jpg',
       detailedDescription: `To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.`,
