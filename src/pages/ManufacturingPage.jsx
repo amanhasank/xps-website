@@ -95,7 +95,8 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
         '/manufacturing/s5.jpg',
         '/manufacturing/s1.png',
         '/manufacturing/s4.jpg',
-        '/manufacturing/DSC_8230.jpg'
+        '/manufacturing/DSC_8230.jpg',
+        '/manufacturing/DSC_8394.jpg'
       ],
       specifications: [
         {
@@ -116,7 +117,7 @@ The Heat Treatment Department conducts hardening and tempering to ensure that th
 At XPS, heavy investment has been done to install the latest and state of the art continuous furnace to ensure that the desired results are achieved every time. Regular maintenance and check-ups are done to maintain the same quality. All the data are stored and can be shown on demand.`,
       images: [
         '/manufacturing/heattreatment.jpeg',
-        '/manufacturing/DSC_8195.jpg' 
+        '/manufacturing/DSC_8199.jpg' 
       ],
       specifications: [
         {
@@ -266,81 +267,91 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                 const hotForging = process;
                 const coldForging = manufacturingProcesses.find(p => p.id === 3);
                 if (!hotForging || !coldForging) return null;
+                // Add FORGING title above the parallel section
                 return (
-                  <Fade key="hot-cold-forging" direction="up" triggerOnce={true} className="relative">
-                    <div className="flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 my-8 group">
-                      {/* HOT FORGING */}
-                      <div className="flex-1">
-                        {/* Process Card */}
-                        <div
-                          className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
-                          onClick={() => openModal(hotForging)}
-                          style={{
-                            background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                          }}
-                        >
-                          <div className="flex flex-col gap-6 p-6">
-                            {/* Image Section */}
-                            <div className="w-full relative overflow-hidden rounded-lg">
-                              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                              <img
-                                src={hotForging.image}
-                                alt={hotForging.title}
-                                className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                  <>
+                    <Fade triggerOnce>
+                      <div className="w-full flex justify-center mb-8">
+                        <h2 className="text-3l font-bold text-white tracking-wide px-10 py-4 rounded-2xl shadow-lg bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700">
+                          FORGING
+                        </h2>
+                      </div>
+                    </Fade>
+                    <Fade key="hot-cold-forging" direction="up" triggerOnce={true} className="relative">
+                      <div className="flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 my-8 group">
+                        {/* HOT FORGING */}
+                        <div className="flex-1">
+                          {/* Process Card */}
+                          <div
+                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                            onClick={() => openModal(hotForging)}
+                            style={{
+                              background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
+                            }}
+                          >
+                            <div className="flex flex-col gap-6 p-6">
+                              {/* Image Section */}
+                              <div className="w-full relative overflow-hidden rounded-lg">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <img
+                                  src={hotForging.image}
+                                  alt={hotForging.title}
+                                  className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                  <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                                </div>
+                              </div>
+                              {/* Content Section */}
+                              <div className="w-full">
+                                <h2 className="text-2xl font-semibold text-blue-900 mb-4">{hotForging.title}</h2>
+                                <p className="text-gray-700 leading-relaxed mb-6">{hotForging.description}</p>
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                  Learn More
+                                  <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+                                </button>
                               </div>
                             </div>
-                            {/* Content Section */}
-                            <div className="w-full">
-                              <h2 className="text-2xl font-semibold text-blue-900 mb-4">{hotForging.title}</h2>
-                              <p className="text-gray-700 leading-relaxed mb-6">{hotForging.description}</p>
-                              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                                Learn More
-                                <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                              </button>
+                          </div>
+                        </div>
+                        {/* COLD FORGING */}
+                        <div className="flex-1">
+                          {/* Process Card */}
+                          <div
+                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                            onClick={() => openModal(coldForging)}
+                            style={{
+                              background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
+                            }}
+                          >
+                            <div className="flex flex-col gap-6 p-6">
+                              {/* Image Section */}
+                              <div className="w-full relative overflow-hidden rounded-lg">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <img
+                                  src={coldForging.image}
+                                  alt={coldForging.title}
+                                  className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                  <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
+                                </div>
+                              </div>
+                              {/* Content Section */}
+                              <div className="w-full">
+                                <h2 className="text-2xl font-semibold text-blue-900 mb-4">{coldForging.title}</h2>
+                                <p className="text-gray-700 leading-relaxed mb-6">{coldForging.description}</p>
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                  Learn More
+                                  <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      {/* COLD FORGING */}
-                      <div className="flex-1">
-                        {/* Process Card */}
-                        <div
-                          className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
-                          onClick={() => openModal(coldForging)}
-                          style={{
-                            background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                          }}
-                        >
-                          <div className="flex flex-col gap-6 p-6">
-                            {/* Image Section */}
-                            <div className="w-full relative overflow-hidden rounded-lg">
-                              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                              <img
-                                src={coldForging.image}
-                                alt={coldForging.title}
-                                className="w-full h-48 object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <Info className="w-12 h-12 text-white transform transition-transform duration-300 group-hover:scale-110" />
-                              </div>
-                            </div>
-                            {/* Content Section */}
-                            <div className="w-full">
-                              <h2 className="text-2xl font-semibold text-blue-900 mb-4">{coldForging.title}</h2>
-                              <p className="text-gray-700 leading-relaxed mb-6">{coldForging.description}</p>
-                              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                                Learn More
-                                <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Fade>
+                    </Fade>
+                  </>
                 );
               }
               // Skip rendering COLD FORGING here (handled above)
