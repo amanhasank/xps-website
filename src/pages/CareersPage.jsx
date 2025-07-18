@@ -37,7 +37,7 @@ export default function CareersPage() {
             </p>
 
             <p>
-              Are you prepared to engage in a professional career with Xtra Precision Screws Pvt. Ltd. as your partner? We offer you ideal opportunities to apply your skills and wide latitude to design your professional career. Pioneer always welcome young, dynamic, ground to earth hard workers and dedicated for their growth. We look forward to hearing from you.
+              Are you prepared to engage in a professional career with Xtra Precision Screws Pvt. Ltd. as our partner? We offer you ideal opportunities to apply your skills and wide latitude to design your professional career. Pioneer always welcome young, dynamic, ground to earth hard workers and dedicated for their growth. We look forward to hearing from you.
             </p>
 
             <p>
