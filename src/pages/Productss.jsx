@@ -13,6 +13,23 @@ export default function ProductsPage() {
   const [searchParams] = useSearchParams();
   const productRefs = useRef({});
 
+  // Build images array for the selected product
+  const images = React.useMemo(() => {
+    if (!selectedProduct) return [];
+    if (selectedProduct.additionalImages) {
+      return [
+        { src: selectedProduct.image, alt: selectedProduct.name },
+        ...selectedProduct.additionalImages.map(img => ({ src: img.image, alt: img.title }))
+      ];
+    } else {
+      return [
+        { src: selectedProduct.image, alt: selectedProduct.name },
+        { src: selectedProduct.mainImage, alt: selectedProduct.name },
+        { src: selectedProduct.technicalImage, alt: `${selectedProduct.name} Technical Drawing` }
+      ];
+    }
+  }, [selectedProduct]);
+
   useEffect(() => {
     // Add any initialization logic here
   }, []); // Empty dependency array since we don't need productCategories here
@@ -54,13 +71,13 @@ export default function ProductsPage() {
   // Carousel navigation
   const goToPreviousImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? selectedProduct.images.length - 1 : prevIndex - 1
+      images.length === 0 ? 0 : (prevIndex === 0 ? images.length - 1 : prevIndex - 1)
     );
   };
 
   const goToNextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === selectedProduct.images.length - 1 ? 0 : prevIndex + 1
+      images.length === 0 ? 0 : (prevIndex === images.length - 1 ? 0 : prevIndex + 1)
     );
   };
 
@@ -133,51 +150,45 @@ export default function ProductsPage() {
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
                 
                 <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <div className="space-y-4">
-                    {selectedProduct.additionalImages ? (
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="overflow-hidden rounded-lg">
-                          <img
-                            src={selectedProduct.image}
-                            alt={selectedProduct.name}
-                            className="w-full h-auto"
-                          />
-                        </div>
-                        {selectedProduct.additionalImages.map((img, index) => (
-                          <div key={index} className="overflow-hidden rounded-lg">
+                  <div className="space-y-4 flex flex-col items-center">
+                    {/* Image Slider */}
+                    {(() => {
+                      if (!images.length) return null;
+                      const current = images[currentImageIndex];
+                      return (
+                        <div className="relative w-full flex flex-col items-center">
+                          <div className="overflow-hidden rounded-lg w-full flex justify-center items-center" style={{ minHeight: 250 }}>
                             <img
-                              src={img.image}
-                              alt={img.title}
-                              className="w-full h-auto"
+                              src={current.src}
+                              alt={current.alt}
+                              className="w-auto max-h-80 object-contain mx-auto transition-all duration-300"
                             />
                           </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <>
-                        <div className="overflow-hidden rounded-lg">
-                          <img
-                            src={selectedProduct.image}
-                            alt={selectedProduct.name}
-                            className="w-full h-auto"
-                          />
+                          {/* Navigation */}
+                          {images.length > 1 && (
+                            <div className="flex items-center justify-center mt-4 gap-4">
+                              <button
+                                onClick={goToPreviousImage}
+                                className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-blue-700 shadow"
+                                aria-label="Previous image"
+                              >
+                                <ChevronLeft className="w-6 h-6" />
+                              </button>
+                              <span className="text-gray-600 text-sm">
+                                {currentImageIndex + 1} / {images.length}
+                              </span>
+                              <button
+                                onClick={goToNextImage}
+                                className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-blue-700 shadow"
+                                aria-label="Next image"
+                              >
+                                <ChevronRight className="w-6 h-6" />
+                              </button>
+                            </div>
+                          )}
                         </div>
-                        <div className="overflow-hidden rounded-lg">
-                          <img
-                            src={selectedProduct.mainImage}
-                            alt={selectedProduct.name}
-                            className="w-full h-auto"
-                          />
-                        </div>
-                        <div className="overflow-hidden rounded-lg">
-                          <img
-                            src={selectedProduct.technicalImage}
-                            alt={`${selectedProduct.name} Technical Drawing`}
-                            className="w-full h-auto"
-                          />
-                        </div>
-                      </>
-                    )}
+                      );
+                    })()}
                   </div>
                   
                   <div className="space-y-4">
