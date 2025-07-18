@@ -25,10 +25,10 @@ export default function ManufacturingPage() {
 
 Wire Drawing is carried out to get the required wire size for cold forging the parts depending upon the size of fasteners to be manufactured. Each lot is identified with a unique heat number. The lots are 100% checked for chemical composition (by Spectrometer), metallurgical & mechanical Properties. All records are maintained and can be provided on demand.`,
       images: [
-        '/manufacturing/DSC_8434.jpg',
-        '/manufacturing/raw.png',
+        '/manufacturing/DSC_8434.jpg'
+        // '/manufacturing/raw.png',
 
-        '/manufacturing/DSC_8435.jpg'
+        // '/manufacturing/DSC_8435.jpg'
       ],
       specifications: [
         {
@@ -71,9 +71,9 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
         // '/manufacturing/coldf.png',
         // '/manufacturing/cold1.png',
         // '/manufacturing/cold2.png',
-        // '/manufacturing/cold.png',
-        '/manufacturing/DSC_8432.jpg',
-        '/manufacturing/DSC_8430.jpg'
+        '/manufacturing/cold.png',
+        '/manufacturing/DSC_8432.jpg'
+        // '/manufacturing/DSC_8430.jpg'
       ],
       specifications: [
         {
@@ -157,18 +157,18 @@ We provide following surface treatment as per customer requirement:
       id: 7,
       title: 'QUALITY',
       description: 'XPS conducts rigorous quality assurance testing on all the fasteners it produces. Fasteners and Machine components are tested against stringent quality measures to guarantee performance and compliance for all the metrics based on industry standards or specific requirements.',
-      image: '/manufacturing/quality.png',
+      image: '/manufacturing/DSC_8517.jpg',
       detailedDescription: `XPS conducts rigorous quality assurance testing on all the fasteners it produces. Fasteners and Machine components are tested against stringent quality measures to guarantee performance and compliance for all the metrics based on industry standards or specific requirements.
 
 XPS has a QUALITY PLAN that ASSURES all parts will meet and exceed customer requirements. Our quality staff, with many years of experience in quality control and engineering, has complete understanding of all standards and specifications. Together with our "State of the Art" fastener testing equipment, you can be ASSURED of receiving the PRECISE, QUALITY TESTED fastener for your specific application.
 
 We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, and Certificates of Compliance upon request.`,
       images: [
-        '/manufacturing/quality.png',
-        '/manufacturing/arrow.png',
+
+        // '/manufacturing/arrow.png',
         '/manufacturing/arrow2.png',
-        '/manufacturing/DSC_8517.jpg',
-        '/manufacturing/DSC_8508.jpg'
+        // '/manufacturing/DSC_8517.jpg',
+        // '/manufacturing/DSC_8508.jpg'
       ],
       specifications: [
         {
