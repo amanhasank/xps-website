@@ -60,7 +60,7 @@ export const productCategories = [
     id: 4,
     name: 'BUTTON HEAD CAP SCREW',
     description: 'Screws with a wide, low-profile cylindrical head and hexagonal drive.',
-    image: '/products/bb4.png',
+    image: '/products/bb4-hd.jpeg',
     mainImage: '/products/btn.jpg',
     technicalImage: '/products/prd-t4.png',
     specifications: [
@@ -79,7 +79,7 @@ export const productCategories = [
     id: 5,
     name: 'HEX NUTS',
     description: 'Six-sided nuts used with bolts and screws to fasten components.',
-    image: '/products/bb5.png',
+    image: '/products/bb5-hd.jpeg',
     mainImage: '/products/hex.png',
     technicalImage: '/products/prd-t5.png',
     specifications: [
@@ -98,7 +98,7 @@ export const productCategories = [
     id: 6,
     name: 'HEX HEAD BOLT/SCREW',
     description: 'Bolts/screws with a hexagonal head, driven by a wrench.',
-    image: '/products/bb6.png',
+    image: '/products/bb6-hd.jpeg',
     mainImage: '/products/hex-h.jpg',
     technicalImage: '/products/prd-t6.png',
     specifications: [
