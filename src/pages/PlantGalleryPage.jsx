@@ -18,8 +18,8 @@ export default function PlantGalleryPage() {
     '/plant-gallery/plant-9.jpg',
     '/plant-gallery/plant-10.jpg',
     '/plant-gallery/plant-11.jpg',
-    '/plant-gallery/plant-12.jpg'
-    
+    '/plant-gallery/plant-12.jpg',
+    '/plant-gallery/plant-13.png'
   ];
 
   const openModal = (index) => {

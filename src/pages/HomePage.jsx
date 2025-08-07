@@ -191,10 +191,24 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600 text-center">Compliance</div>
               </div>
             </Fade>
+            
           </div>
 
           {/* BIS Certifications - Centered */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 max-w-3xl mx-auto">
+            {/* ZED Certificate */}
+            <Fade triggerOnce={true} delay={700}>
+              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <img
+                  src="/logos/zed.png"
+                  alt="ZED Certified"
+                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
+                  onClick={() => openModal('/logos/zed.png', 'ZED Certified')}
+                />
+                <div className="text-2xl font-bold text-blue-600 mb-1">ZED</div>
+                <div className="text-sm text-gray-600 text-center">Certification</div>
+              </div>
+            </Fade>
             <Fade triggerOnce={true} delay={700}>
               <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <img

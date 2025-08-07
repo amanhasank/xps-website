@@ -8,6 +8,7 @@ const certifications = [
   { src: '/logos/iatf-16949.png', title: 'IATF', subtitle: '16949:2016', alt: 'IATF 16949:2016 Certified' },
   { src: '/logos/ce.png', title: 'CE', subtitle: 'Certification', alt: 'CE Certified' },
   { src: '/logos/rohs.png', title: 'ROHS', subtitle: 'Compliance', alt: 'ROHS Compliant' },
+  { src: '/logos/zed.png', title: 'ZED', subtitle: 'Certification', alt: 'ZED Certified' },
 ];
 
 const bisCertifications = [
@@ -43,9 +44,27 @@ const CertificationsPage = () => {
         </Fade>
 
         {/* Scrollable card container for mobile and grid for larger screens */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          {certifications.map((cert, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          {certifications.slice(0, 4).map((cert, index) => (
             <Fade key={index} triggerOnce delay={index * 100}>
+              <div
+                className="bg-white hover:shadow-xl transition-transform transform hover:scale-105 rounded-xl p-6 flex flex-col items-center border border-gray-200 cursor-pointer"
+                onClick={() => openModal(cert.src, cert.alt)}
+              >
+                <img
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="w-20 h-20 object-contain mb-4 transition duration-300"
+                />
+                <div className="text-2xl font-bold text-blue-600 mb-1">{cert.title}</div>
+                <div className="text-sm text-gray-600 text-center">{cert.subtitle}</div>
+              </div>
+            </Fade>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {certifications.slice(4, 7).map((cert, index) => (
+            <Fade key={index + 4} triggerOnce delay={(index + 4) * 100}>
               <div
                 className="bg-white hover:shadow-xl transition-transform transform hover:scale-105 rounded-xl p-6 flex flex-col items-center border border-gray-200 cursor-pointer"
                 onClick={() => openModal(cert.src, cert.alt)}

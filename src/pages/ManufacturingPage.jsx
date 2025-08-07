@@ -278,16 +278,13 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                       </div>
                     </Fade>
                     <Fade key="hot-cold-forging" direction="up" triggerOnce={true} className="relative">
-                      <div className="flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 my-8 group">
+                      <div className="flex flex-col md:flex-row items-stretch gap-8 py-12 px-6 my-8">
                         {/* HOT FORGING */}
                         <div className="flex-1">
                           {/* Process Card */}
                           <div
-                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer group hover:bg-blue-600/90`}
                             onClick={() => openModal(hotForging)}
-                            style={{
-                              background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                            }}
                           >
                             <div className="flex flex-col gap-6 p-6">
                               {/* Image Section */}
@@ -304,9 +301,9 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                               </div>
                               {/* Content Section */}
                               <div className="w-full">
-                                <h2 className="text-2xl font-semibold text-blue-900 mb-4">{hotForging.title}</h2>
-                                <p className="text-gray-700 leading-relaxed mb-6">{hotForging.description}</p>
-                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <h2 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-white">{hotForging.title}</h2>
+                                <p className="leading-relaxed mb-6 transition-colors duration-300 group-hover:text-white">{hotForging.description}</p>
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:bg-blue-200 group-hover:text-blue-800 group-hover:from-blue-200 group-hover:to-blue-100">
                                   Learn More
                                   <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
                                 </button>
@@ -318,11 +315,8 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                         <div className="flex-1">
                           {/* Process Card */}
                           <div
-                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                            className={`w-full bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer group hover:bg-blue-600/90`}
                             onClick={() => openModal(coldForging)}
-                            style={{
-                              background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                            }}
                           >
                             <div className="flex flex-col gap-6 p-6">
                               {/* Image Section */}
@@ -339,9 +333,9 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                               </div>
                               {/* Content Section */}
                               <div className="w-full">
-                                <h2 className="text-2xl font-semibold text-blue-900 mb-4">{coldForging.title}</h2>
-                                <p className="text-gray-700 leading-relaxed mb-6">{coldForging.description}</p>
-                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                                <h2 className="text-2xl font-semibold mb-4 transition-colors duration-300 group-hover:text-white">{coldForging.title}</h2>
+                                <p className="leading-relaxed mb-6 transition-colors duration-300 group-hover:text-white">{coldForging.description}</p>
+                                <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:bg-blue-200 group-hover:text-blue-800 group-hover:from-blue-200 group-hover:to-blue-100">
                                   Learn More
                                   <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
                                 </button>
@@ -374,11 +368,8 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
 
                     {/* Process Card */}
                     <div
-                      className={`w-full md:w-5/6 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer`}
+                      className={`w-full md:w-5/6 ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'} bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-1 cursor-pointer group hover:bg-blue-600/90`}
                       onClick={() => openModal(process)}
-                      style={{
-                        background: 'linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%)',
-                      }}
                     >
                       <div className="flex flex-col md:flex-row gap-6 p-6">
                         {/* Image Section */}
@@ -399,9 +390,9 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
                           <div className="flex items-center gap-4 mb-4 md:hidden">
                             <h2 className="text-2xl font-semibold text-blue-900">{process.title}</h2>
                           </div>
-                          <h2 className="text-2xl font-semibold text-blue-900 mb-4 hidden md:block">{process.title}</h2>
-                          <p className="text-gray-700 leading-relaxed mb-6">{process.description}</p>
-                          <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                          <h2 className="text-2xl font-semibold mb-4 hidden md:block transition-colors duration-300 group-hover:text-white">{process.title}</h2>
+                          <p className="leading-relaxed mb-6 transition-colors duration-300 group-hover:text-white">{process.description}</p>
+                          <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg group-hover:bg-blue-200 group-hover:text-blue-800 group-hover:from-blue-200 group-hover:to-blue-100"
                             onClick={e => { e.stopPropagation(); openModal(process); }}>
                             Learn More
                             <ChevronRight className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" />
