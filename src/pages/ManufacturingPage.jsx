@@ -21,7 +21,7 @@ export default function ManufacturingPage() {
       title: 'RAW MATERIAL & WIRE PROCESSING',
       description: 'XPS source material directly from high quality steel manufacturers. All the material is thoroughly inspected before processing.',
       image: '/manufacturing/DSC_8435.jpg',
-      detailedDescription: `XPS sources material directly from high quality steel manufacturers. All the material is thoroughly inspected before processing. Each grade is marked and provided with a proper identification tag. After the inspection the material is given for processing (annealing & drawing).
+      detailedDescription: `XPS sources material directly from high quality steel manufacturers. Raw material sourced from: JSW, JSPL (Company name: Jayswal Neco). All the material is thoroughly inspected before processing. Each grade is marked and provided with a proper identification tag. After the inspection the material is given for processing (annealing & drawing).
 
 Wire Drawing is carried out to get the required wire size for cold forging the parts depending upon the size of fasteners to be manufactured. Each lot is identified with a unique heat number. The lots are 100% checked for chemical composition (by Spectrometer), metallurgical & mechanical Properties. All records are maintained and can be provided on demand.`,
       images: [

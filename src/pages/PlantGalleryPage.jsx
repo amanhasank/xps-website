@@ -19,7 +19,9 @@ export default function PlantGalleryPage() {
     '/plant-gallery/plant-10.jpg',
     '/plant-gallery/plant-11.jpg',
     '/plant-gallery/plant-12.jpg',
-    '/plant-gallery/plant-13.png'
+    '/plant-gallery/office-1.jpg',
+    '/plant-gallery/office-2.jpeg',
+    '/plant-gallery/office-3.jpeg'
   ];
 
   const openModal = (index) => {

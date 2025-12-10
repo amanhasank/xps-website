@@ -10,6 +10,7 @@ export default function ProductsPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedImageAlt, setSelectedImageAlt] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // For carousel
+  const [currentPageIndex, setCurrentPageIndex] = useState(0); // For page navigation
   const [searchParams] = useSearchParams();
   const productRefs = useRef({});
 
@@ -51,6 +52,7 @@ export default function ProductsPage() {
   const openModal = (product) => {
     setSelectedProduct(product);
     setCurrentImageIndex(0); // Reset carousel index
+    setCurrentPageIndex(0); // Reset page index
     setIsModalOpen(true);
   };
 
@@ -68,17 +70,42 @@ export default function ProductsPage() {
     setSelectedImageAlt(imageAlt);
   };
 
-  // Carousel navigation
+  // Sync image index with page index when pages change
+  useEffect(() => {
+    if (selectedProduct?.pages && selectedProduct.pages.length > 0 && images.length > 0) {
+      // Map page index to image index (cycle through images if more pages than images)
+      const imageIndex = currentPageIndex % images.length;
+      setCurrentImageIndex(imageIndex);
+    }
+  }, [currentPageIndex, selectedProduct, images.length]);
+
+  // Carousel navigation - synchronized with page navigation
   const goToPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      images.length === 0 ? 0 : (prevIndex === 0 ? images.length - 1 : prevIndex - 1)
-    );
+    if (selectedProduct?.pages && selectedProduct.pages.length > 0) {
+      // Navigate pages if product has pages (image will sync via useEffect)
+      setCurrentPageIndex((prevPageIndex) =>
+        prevPageIndex === 0 ? selectedProduct.pages.length - 1 : prevPageIndex - 1
+      );
+    } else {
+      // Navigate images if no pages
+      setCurrentImageIndex((prevIndex) =>
+        images.length === 0 ? 0 : (prevIndex === 0 ? images.length - 1 : prevIndex - 1)
+      );
+    }
   };
 
   const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      images.length === 0 ? 0 : (prevIndex === images.length - 1 ? 0 : prevIndex + 1)
-    );
+    if (selectedProduct?.pages && selectedProduct.pages.length > 0) {
+      // Navigate pages if product has pages (image will sync via useEffect)
+      setCurrentPageIndex((prevPageIndex) =>
+        prevPageIndex === selectedProduct.pages.length - 1 ? 0 : prevPageIndex + 1
+      );
+    } else {
+      // Navigate images if no pages
+      setCurrentImageIndex((prevIndex) =>
+        images.length === 0 ? 0 : (prevIndex === images.length - 1 ? 0 : prevIndex + 1)
+      );
+    }
   };
 
   return (
@@ -149,6 +176,25 @@ export default function ProductsPage() {
               <div className="p-6">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
                 
+                {/* Page Tabs - Only show if product has pages */}
+                {selectedProduct.pages && selectedProduct.pages.length > 0 && (
+                  <div className="mb-6 flex gap-2 border-b border-gray-200">
+                    {selectedProduct.pages.map((page, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentPageIndex(index)}
+                        className={`px-4 py-2 font-medium transition-colors duration-200 ${
+                          currentPageIndex === index
+                            ? 'text-blue-600 border-b-2 border-blue-600'
+                            : 'text-gray-600 hover:text-gray-900'
+                        }`}
+                      >
+                        {page.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
                 <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="space-y-4 flex flex-col items-center">
                     {/* Image Slider */}
@@ -165,46 +211,67 @@ export default function ProductsPage() {
                             />
                           </div>
                           {/* Navigation */}
-                          {images.length > 1 && (
+                          {(selectedProduct?.pages && selectedProduct.pages.length > 0) || images.length > 1 ? (
                             <div className="flex items-center justify-center mt-4 gap-4">
                               <button
                                 onClick={goToPreviousImage}
                                 className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-blue-700 shadow"
-                                aria-label="Previous image"
+                                aria-label={selectedProduct?.pages ? "Previous page" : "Previous image"}
                               >
                                 <ChevronLeft className="w-6 h-6" />
                               </button>
                               <span className="text-gray-600 text-sm">
-                                {currentImageIndex + 1} / {images.length}
+                                {selectedProduct?.pages && selectedProduct.pages.length > 0
+                                  ? `${currentPageIndex + 1} / ${selectedProduct.pages.length}`
+                                  : `${currentImageIndex + 1} / ${images.length}`
+                                }
                               </span>
                               <button
                                 onClick={goToNextImage}
                                 className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-blue-700 shadow"
-                                aria-label="Next image"
+                                aria-label={selectedProduct?.pages ? "Next page" : "Next image"}
                               >
                                 <ChevronRight className="w-6 h-6" />
                               </button>
                             </div>
-                          )}
+                          ) : null}
                         </div>
                       );
                     })()}
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="rounded-lg bg-gray-50 p-4">
-                      <h3 className="mb-3 text-lg font-semibold text-gray-900">Specifications</h3>
-                      <ul className="space-y-2">
-                        {selectedProduct.specifications.map((spec, index) => (
-                          <li key={index} className="flex items-start">
-                            <svg className="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-gray-700">{spec}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {/* Page Content */}
+                    {selectedProduct.pages && selectedProduct.pages.length > 0 ? (
+                      <div className="rounded-lg bg-gray-50 p-4">
+                        <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                          {selectedProduct.pages[currentPageIndex].title}
+                        </h3>
+                        <ul className="space-y-2">
+                          {selectedProduct.pages[currentPageIndex].content.map((item, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="mr-2 text-blue-600 font-bold">•</span>
+                              <span className="text-gray-700">{item.value}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : (
+                      /* Fallback to specifications if no pages */
+                      <div className="rounded-lg bg-gray-50 p-4">
+                        <h3 className="mb-3 text-lg font-semibold text-gray-900">Specifications</h3>
+                        <ul className="space-y-2">
+                          {selectedProduct.specifications.map((spec, index) => (
+                            <li key={index} className="flex items-start">
+                              <svg className="mr-2 h-5 w-5 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span className="text-gray-700">{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
