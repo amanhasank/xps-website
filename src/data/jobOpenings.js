@@ -10,6 +10,6 @@ export const jobOpenings = [
       'Communication and negotiation skills are a must.',
       'Must be able to work in deadlines and strong follow-up is required.'
     ],
-    contactEmail: 'nc@xpsindia.com'
+    contactEmail: 'hr@xpsindia.com'
   }
 ]; 

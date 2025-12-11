@@ -60,8 +60,8 @@ export default function CareersPage() {
 
               <div className="flex items-center space-x-3 text-gray-700">
                 <Mail className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                <a href="mailto:nc@xpsindia.com" className="hover:text-blue-600">
-                  nc@xpsindia.com
+                <a href="mailto:hr@xpsindia.com" className="hover:text-blue-600">
+                  hr@xpsindia.com
                 </a>
               </div>
             </div>

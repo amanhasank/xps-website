@@ -58,7 +58,7 @@ export const productCategories = [
     id: 2,
     name: 'SOCKET COUNTER SUNK HEAD (CSK)',
     description: 'Screws that sit flush with the surface, featuring a conical head.',
-    image: '/products/bb2.jpg',
+    image: '/products/csk.png',
     mainImage: '/products/prd2.png',
     technicalImage: '/products/prd-t2.png',
     specifications: [
@@ -291,7 +291,7 @@ export const productCategories = [
     id: 6,
     name: 'HEX HEAD BOLT/SCREW',
     description: 'Bolts/screws with a hexagonal head, driven by a wrench.',
-    image: '/products/bb6-hd.jpeg',
+    image: '/products/bb66.jpeg',
     mainImage: '/products/hex-h.jpg',
     technicalImage: '/products/prd-t6.png',
     specifications: [

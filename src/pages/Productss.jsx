@@ -189,7 +189,7 @@ export default function ProductsPage() {
                             : 'text-gray-600 hover:text-gray-900'
                         }`}
                       >
-                        {page.title}
+                        {index + 1}
                       </button>
                     ))}
                   </div>
