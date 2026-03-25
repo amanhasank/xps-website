@@ -19,16 +19,11 @@ export default function ManufacturingPage() {
     {
       id: 1,
       title: 'RAW MATERIAL & WIRE PROCESSING',
-      description: 'XPS source material directly from high quality steel manufacturers. All the material is thoroughly inspected before processing.',
+      description: 'Steel sourced directly from reputed manufacturers, 100% inspected for chemical, metallurgical, and mechanical properties before processing.',
       image: '/manufacturing/DSC_8435.jpg',
-      detailedDescription: `XPS sources material directly from high quality steel manufacturers. Raw material sourced from: JSW, JSPL (Company name: Jayswal Neco). All the material is thoroughly inspected before processing. Each grade is marked and provided with a proper identification tag. After the inspection the material is given for processing (annealing & drawing).
-
-Wire Drawing is carried out to get the required wire size for cold forging the parts depending upon the size of fasteners to be manufactured. Each lot is identified with a unique heat number. The lots are 100% checked for chemical composition (by Spectrometer), metallurgical & mechanical Properties. All records are maintained and can be provided on demand.`,
+      detailedDescription: 'XPS sources high-quality steel from reputed manufacturers (JSW, JSPL). Every lot is inspected for chemical composition (by Spectrometer), metallurgical and mechanical properties, and tagged with a unique heat number. Wire drawing then provides the exact wire size required for cold forging. All records are maintained and available on demand.',
       images: [
         '/manufacturing/DSC_8434.jpg'
-        // '/manufacturing/raw.png',
-
-        // '/manufacturing/DSC_8435.jpg'
       ],
       specifications: [
         {
@@ -40,13 +35,9 @@ Wire Drawing is carried out to get the required wire size for cold forging the p
     {
       id: 2,
       title: 'HOT FORGING',
-      description: 'It is the process of forming the shape of the metal in hot condition into a predetermined shape. A metal is heated to the proper temperature by high-speed electric induction before it is inserted into a metal piece.',
+      description: 'Metal is heated by high-speed electric induction and shaped under force into the required form. Used for fasteners M27 and above.',
       image: '/manufacturing/hot.png',
-      detailedDescription: `Forging is the process of deforming metal into a predetermined shape using certain tools and equipment—deformation is accomplished using hot, cold, or even warm forging processes. It is the basic operation in most bolts and screws to give their desired shape. XPS has the capability to develop and forge highly special parts, Bolts/Screws/Studs etc. along with the vast range of standard fasteners.
-
-Hot Forging is the process of forming the shape of the metal in hot condition into a predetermined shape. A metal is heated to the proper temperature by high-speed electric induction before it is inserted into a metal piece. Bolts are hot forged when the material is too large in diameter or it is not malleable enough.
-
-* Below M27 we manufacture by cold forging`,
+      detailedDescription: 'Hot Forging shapes metal by heating it to the proper temperature using high-speed electric induction before pressing it into a die. This method is used for larger diameter fasteners (M27 and above) that are too large or insufficiently malleable for cold forging. XPS has the capability to forge highly special parts — bolts, screws, studs — in addition to the standard range.',
       images: [
         '/manufacturing/forging.png'
       ],
@@ -60,20 +51,12 @@ Hot Forging is the process of forming the shape of the metal in hot condition in
     {
       id: 3,
       title: 'COLD FORGING',
-      description: 'It is the process of forming the shape of a metal piece by external forces in ambient conditions. It is normally done at room temperature or near room temperature.',
+      description: 'Metal is shaped at room temperature on fully automatic high-speed multi-station bolt formers. Used for fasteners M3 to M24.',
       image: '/manufacturing/DSC_8432.jpg',
-      detailedDescription: `Forging is the process of deforming metal into a predetermined shape using certain tools and equipment—deformation is accomplished using hot, cold, or even warm forging processes. It is the basic operation in most bolts and screws to give their desired shape. XPS has the capability to develop and forge highly special parts, Bolts/Screws/Studs etc. along with the vast range of standard fasteners.
-
-Cold Forging is the process of forming the shape of a metal piece by external forces in ambient conditions. It is normally done at room temperature or near room temperature. At XPS, we do the cold forging on our fully automatic high speed multi station bolt formers. Our capacity includes a wide range of High Tensile Fasteners.
-
-* Above M24 we manufacture by hot forging`,
+      detailedDescription: 'Cold Forging shapes metal at room temperature using external compressive forces on fully automatic, high-speed multi-station bolt formers. This process delivers superior grain flow, dimensional accuracy, and surface quality. XPS produces a wide range of high-tensile fasteners (M3 to M24) by cold forging, with hot forging used above M24.',
       images: [
-        // '/manufacturing/coldf.png',
-        // '/manufacturing/cold1.png',
-        // '/manufacturing/cold2.png',
         '/manufacturing/cold.png',
         '/manufacturing/DSC_8432.jpg'
-        // '/manufacturing/DSC_8430.jpg'
       ],
       specifications: [
         {
@@ -85,16 +68,10 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
     {
       id: 4,
       title: 'SECONDARY OPERATIONS',
-      description: 'XPS is capable of doing many second operation in House',
+      description: 'In-house CNC, drilling, boring, grinding, rolling, and milling for special fastener requirements.',
       image: '/manufacturing/DSC_8394.jpg',
-      detailedDescription: 'XPS is capable of doing many second operation in House',
+      detailedDescription: 'XPS is capable of performing many secondary operations in-house, including CNC machining, drilling, boring, grinding, thread rolling, and milling — enabling complete control over special and custom fastener requirements without outsourcing.',
       images: [
-        // '/manufacturing/s6.png',
-        // '/manufacturing/s2.jpg',
-        // '/manufacturing/s3.jpg',
-        // '/manufacturing/s5.jpg',
-        // '/manufacturing/s1.png',
-        // '/manufacturing/s4.jpg',
         '/manufacturing/DSC_8230.jpg',
         '/manufacturing/DSC_8394.jpg'
       ],
@@ -106,18 +83,29 @@ Cold Forging is the process of forming the shape of a metal piece by external fo
       ]
     },
     {
+      id: 9,
+      title: 'THREAD ROLLING',
+      description: 'Threads are cold-formed by displacing metal between precision dies, producing stronger threads with superior surface finish.',
+      image: '/manufacturing/DSC_8430.jpg',
+      detailedDescription: 'Thread Rolling is a cold-forming process where threads are formed by pressing the fastener blank between two or three hardened dies. This displaces rather than cuts the material, resulting in threads with greater tensile strength, improved fatigue resistance, and a superior surface finish compared to cut threads.',
+      images: [
+        '/manufacturing/DSC_8430.jpg'
+      ],
+      specifications: [
+        {
+          title: 'PROCESS',
+          value: 'COLD-FORMED ROLLED THREADS'
+        }
+      ]
+    },
+    {
       id: 5,
       title: 'HEAT TREATMENT',
-      description: 'High-strength or heat-treated fasteners are often required to handle the tensile, shear or combination loads on the bolted joints in demanding applications.',
+      description: 'Hardening and tempering to achieve the required strength class, with minimum 90% martensite grain structure at the core.',
       image: '/manufacturing/DSC_8199.jpg',
-      detailedDescription: `High-strength or heat-treated fasteners are often required to handle the tensile, shear or combination loads on the bolted joints in demanding applications. Many demanding applications require high-strength fasteners in order to handle high tensile and shear stresses generated by the applied loads on the bolted or fastened joint.
-
-The Heat Treatment Department conducts hardening and tempering to ensure that the fasteners meet the required strength and hardness class. This is needed to prevent unacceptable safety risks in the application of the fasteners. The defining characteristic for product quality is core hardness. The requirement for this characteristic is that the product attains, at a minimum, 90 percent martensite grain structures.
-
-At XPS, heavy investment has been done to install the latest and state of the art continuous furnace to ensure that the desired results are achieved every time. Regular maintenance and check-ups are done to maintain the same quality. All the data are stored and can be shown on demand.`,
+      detailedDescription: `Heat Treatment is conducted to ensure fasteners meet the required strength and hardness class. XPS uses a state-of-the-art continuous furnace to achieve consistent results. The process attains a minimum of 90% martensite grain structure at the core — the key quality indicator for high-tensile fasteners. All heat treatment data is recorded and available on demand.`,
       images: [
-        // '/manufacturing/heattreatment.jpeg',
-        '/manufacturing/DSC_8199.jpg' 
+        '/manufacturing/DSC_8199.jpg'
       ],
       specifications: [
         {
@@ -128,21 +116,18 @@ At XPS, heavy investment has been done to install the latest and state of the ar
     },
     {
       id: 6,
-      title: 'SURFACE TREATMENT',
-      description: 'Surface Treatment in Fasteners is done to prevent it from Corrosion and give artistic look.',
+      title: 'SURFACE FINISHING',
+      description: 'Applied to protect fasteners from corrosion and enhance appearance — multiple coating options available as per customer requirement.',
       image: '/manufacturing/surface.png',
-      detailedDescription: `Surface Treatment in Fasteners is done to prevent it from Corrosion and give artistic look.
+      detailedDescription: `Surface finishing protects fasteners from corrosion and improves aesthetics. XPS offers a wide range of treatments on automatic plating and phosphating lines:
 
-We provide following surface treatment as per customer requirement:
-
-• Zinc and Manganese Phosphate Coating on Automatic Phosphating Line
-• Alkaline Zinc Plating, Trivalent Chrome & Hexavalent Chrome in White, Blue, Yellow, Olive Green & Black Passivation on an Automatic Plating Line
-• Cadmium Plating / Nickel Plating / Anodizing
+• Zinc & Manganese Phosphate Coating
+• Alkaline Zinc Plating (White, Blue, Yellow, Olive Green & Black Passivation)
+• Cadmium / Nickel Plating / Anodizing
 • Zinc Iron & Zinc Nickel Plating
 • Geomet, Dacromet, Magni, Zinc Flake Coating
 • Hot Dip Galvanizing
-• MoS2 Coating
-• Loctite (Note: It is not surface Finish)`,
+• MoS2 Coating`,
       images: [
         '/manufacturing/surface.png'
       ],
@@ -155,20 +140,13 @@ We provide following surface treatment as per customer requirement:
     },
     {
       id: 7,
-      title: 'QUALITY',
-      description: 'XPS conducts rigorous quality assurance testing on all the fasteners it produces. Fasteners and Machine components are tested against stringent quality measures to guarantee performance and compliance for all the metrics based on industry standards or specific requirements.',
+      title: 'QUALITY CHECK',
+      description: 'Rigorous 100% inspection of dimensional, physical, and chemical properties using state-of-the-art testing equipment.',
       image: '/manufacturing/DSC_8517.jpg',
-      detailedDescription: `XPS conducts rigorous quality assurance testing on all the fasteners it produces. Fasteners and Machine components are tested against stringent quality measures to guarantee performance and compliance for all the metrics based on industry standards or specific requirements.
-
-XPS has a QUALITY PLAN that ASSURES all parts will meet and exceed customer requirements. Our quality staff, with many years of experience in quality control and engineering, has complete understanding of all standards and specifications. Together with our "State of the Art" fastener testing equipment, you can be ASSURED of receiving the PRECISE, QUALITY TESTED fastener for your specific application.
-
-We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, and Certificates of Compliance upon request.`,
+      detailedDescription: `XPS conducts rigorous quality assurance on all fasteners produced — dimensional, physical, and chemical testing against industry standards or customer-specific requirements. Our experienced quality team uses state-of-the-art equipment to ensure every fastener meets specifications. Dimensional Inspection Reports, Physical & Chemical Reports, and Certificates of Compliance are available on request.`,
       images: [
-
         '/manufacturing/DSC_8517.jpg',
         '/manufacturing/arrow2.png'
-        // '/manufacturing/DSC_8517.jpg',
-        // '/manufacturing/DSC_8508.jpg'
       ],
       specifications: [
         {
@@ -179,10 +157,10 @@ We can furnish Dimensional Inspection Reports, Physical and Chemical Reports, an
     },
     {
       id: 8,
-      title: 'PACKING AND DISPATCH',
-      description: 'To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.',
+      title: 'PACKING & DISPATCH',
+      description: 'Fasteners are packed to maintain product integrity as per customer specifications and dispatched for timely delivery.',
       image: '/slide4.jpg',
-      detailedDescription: `To ensure that high tensile fasteners are packed and dispatched in a manner that maintains product integrity, complies with customer specifications, and ensures timely delivery.`,
+      detailedDescription: 'All finished fasteners are carefully packed to maintain product integrity, labelled as per customer specifications, and dispatched through reliable logistics partners to ensure timely and safe delivery to the end customer.',
       images: [
         '/slide4.jpg'
       ],
