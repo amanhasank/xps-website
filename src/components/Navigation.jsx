@@ -62,44 +62,6 @@ const products = [
   }
 ];
 
-const industries = [
-  {
-    id: 1,
-    name: 'Automotive',
-    path: '/industry#automotive',
-    description: 'Precision fasteners for automotive assembly and manufacturing.'
-  },
-  {
-    id: 2,
-    name: 'Aerospace',
-    path: '/industry#aerospace',
-    description: 'High-performance fasteners meeting aerospace industry standards.'
-  },
-  {
-    id: 3,
-    name: 'Construction',
-    path: '/industry#construction',
-    description: 'Durable fasteners for construction and infrastructure projects.'
-  },
-  {
-    id: 4,
-    name: 'Electronics',
-    path: '/industry#electronics',
-    description: 'Specialized fasteners for electronic equipment and devices.'
-  },
-  {
-    id: 5,
-    name: 'Industrial Machinery',
-    path: '/industry#industrial-machinery',
-    description: 'Heavy-duty fasteners for industrial machinery and equipment.'
-  },
-  {
-    id: 6,
-    name: 'Medical Devices',
-    path: '/industry#medical-devices',
-    description: 'Precision fasteners for medical equipment and devices.'
-  }
-];
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

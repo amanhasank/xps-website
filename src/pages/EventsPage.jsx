@@ -133,18 +133,9 @@ const events = [
 ];
 
 export default function EventsPage() {
-  const [currentEvent, setCurrentEvent] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextEvent = () => {
-    setCurrentEvent((prev) => (prev + 1) % events.length);
-  };
-
-  const prevEvent = () => {
-    setCurrentEvent((prev) => (prev - 1 + events.length) % events.length);
-  };
 
   const openModal = (event) => {
     setSelectedEvent(event);

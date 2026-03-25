@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import HeroSlider from "../components/HeroSlider";
 import { Fade } from "react-awesome-reveal";
-import { ArrowRight } from 'lucide-react';
 import { productCategories } from '../data/products';
 
 export default function HomePage() {

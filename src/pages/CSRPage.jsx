@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
-import { Trophy, Calendar, Users, Target, X } from 'lucide-react';
+import { Trophy, X } from 'lucide-react';
 
 const events = [
   {

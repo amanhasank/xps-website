@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Eye, X, ChevronLeft, ChevronRight } from 'lucide-react'; // Import icons
 import { useSearchParams } from 'react-router-dom';
-import { Fade } from 'react-awesome-reveal';
 import { productCategories } from '../data/products';
 
 export default function ProductsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedImageAlt, setSelectedImageAlt] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0); // For carousel
   const [currentPageIndex, setCurrentPageIndex] = useState(0); // For page navigation
   const [searchParams] = useSearchParams();
@@ -54,20 +51,6 @@ export default function ProductsPage() {
     setCurrentImageIndex(0); // Reset carousel index
     setCurrentPageIndex(0); // Reset page index
     setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => {
-      setSelectedProduct(null);
-      setSelectedImage(null);
-      setSelectedImageAlt("");
-    }, 300);
-  };
-
-  const openImageModal = (imageSrc, imageAlt) => {
-    setSelectedImage(imageSrc);
-    setSelectedImageAlt(imageAlt);
   };
 
   // Sync image index with page index when pages change
