@@ -11,9 +11,17 @@ export default function ProductsPage() {
   const [searchParams] = useSearchParams();
   const productRefs = useRef({});
 
+  // Check if the product uses per-page images (each page has its own image field)
+  const hasPerPageImages = React.useMemo(() => {
+    return selectedProduct?.pages?.length > 0 && selectedProduct.pages.every(p => p.image);
+  }, [selectedProduct]);
+
   // Build images array for the selected product
   const images = React.useMemo(() => {
     if (!selectedProduct) return [];
+    if (hasPerPageImages) {
+      return selectedProduct.pages.map(p => ({ src: p.image, alt: p.title }));
+    }
     if (selectedProduct.additionalImages) {
       return [
         { src: selectedProduct.image, alt: selectedProduct.name },
@@ -26,7 +34,7 @@ export default function ProductsPage() {
         { src: selectedProduct.technicalImage, alt: `${selectedProduct.name} Technical Drawing` }
       ];
     }
-  }, [selectedProduct]);
+  }, [selectedProduct, hasPerPageImages]);
 
   useEffect(() => {
     // Add any initialization logic here
@@ -56,11 +64,12 @@ export default function ProductsPage() {
   // Sync image index with page index when pages change
   useEffect(() => {
     if (selectedProduct?.pages && selectedProduct.pages.length > 0 && images.length > 0) {
-      // Map page index to image index (cycle through images if more pages than images)
-      const imageIndex = currentPageIndex % images.length;
+      const imageIndex = hasPerPageImages
+        ? currentPageIndex                          // 1-to-1: each page has its own image
+        : currentPageIndex % images.length;         // cycle for standard products
       setCurrentImageIndex(imageIndex);
     }
-  }, [currentPageIndex, selectedProduct, images.length]);
+  }, [currentPageIndex, selectedProduct, images.length, hasPerPageImages]);
 
   // Carousel navigation - synchronized with page navigation
   const goToPreviousImage = () => {
@@ -103,7 +112,7 @@ export default function ProductsPage() {
             ref={el => productRefs.current[category.id] = el}
             className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group flex flex-col"
           >
-            <div className="relative h-[200px] bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center p-4 overflow-hidden">
+            <div className="relative h-[200px] bg-white flex items-center justify-center p-4 overflow-hidden">
               <img
                 src={category.image}
                 alt={category.name}
@@ -159,8 +168,8 @@ export default function ProductsPage() {
               <div className="p-6">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900">{selectedProduct.name}</h2>
                 
-                {/* Page Tabs - Only show if product has pages */}
-                {selectedProduct.pages && selectedProduct.pages.length > 0 && (
+                {/* Page Tabs - Only show for standard products, not per-item slides */}
+                {selectedProduct.pages && selectedProduct.pages.length > 0 && !hasPerPageImages && (
                   <div className="mb-6 flex gap-2 border-b border-gray-200">
                     {selectedProduct.pages.map((page, index) => (
                       <button
@@ -186,11 +195,11 @@ export default function ProductsPage() {
                       const current = images[currentImageIndex];
                       return (
                         <div className="relative w-full flex flex-col items-center">
-                          <div className="overflow-hidden rounded-lg w-full flex justify-center items-center" style={{ minHeight: 250 }}>
+                          <div className="overflow-hidden rounded-xl w-full flex justify-center items-center bg-white border border-gray-100 shadow-sm" style={{ minHeight: 300, maxHeight: 340 }}>
                             <img
                               src={current.src}
                               alt={current.alt}
-                              className="w-auto max-h-80 object-contain mx-auto transition-all duration-300"
+                              className="w-full h-[320px] object-contain p-4 transition-all duration-300"
                             />
                           </div>
                           {/* Navigation */}
@@ -226,6 +235,22 @@ export default function ProductsPage() {
                   <div className="space-y-4">
                     {/* Page Content */}
                     {selectedProduct.pages && selectedProduct.pages.length > 0 ? (
+                      hasPerPageImages ? (
+                        /* Per-item slide layout for Special Fasteners */
+                        <div className="rounded-lg bg-gray-50 p-5 h-full flex flex-col justify-center">
+                          <h3 className="text-2xl font-bold text-blue-800 mb-3">
+                            {selectedProduct.pages[currentPageIndex].title}
+                          </h3>
+                          <div className="space-y-2">
+                            {selectedProduct.pages[currentPageIndex].content.map((item, index) => (
+                              <p key={index} className={`${index === 0 ? 'text-sm font-semibold text-blue-600 uppercase tracking-wide' : 'text-gray-700 leading-relaxed'}`}>
+                                {item.value}
+                              </p>
+                            ))}
+                          </div>
+                          <p className="mt-4 text-xs text-gray-400">{currentPageIndex + 1} of {selectedProduct.pages.length}</p>
+                        </div>
+                      ) : (
                       <div className="rounded-lg bg-gray-50 p-4">
                         <h3 className="mb-3 text-lg font-semibold text-gray-900">
                           {selectedProduct.pages[currentPageIndex].title}
@@ -239,6 +264,7 @@ export default function ProductsPage() {
                           ))}
                         </ul>
                       </div>
+                      )
                     ) : (
                       /* Fallback to specifications if no pages */
                       <div className="rounded-lg bg-gray-50 p-4">

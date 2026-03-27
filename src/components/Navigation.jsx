@@ -2,65 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, Linkedin, Twitter, Menu, X } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 import { Fade } from 'react-awesome-reveal';
-
-const products = [
-  {
-    id: 1,
-    name: 'SOCKET HEAD CAP SCREW',
-    path: '/products#socket-head-cap-screw',
-    description: 'High-strength screws with a cylindrical head and hexagonal drive.',
-    image: '/products/bb1-hd.jpeg'
-  },
-  {
-    id: 2,
-    name: 'SOCKET COUNTER SUNK HEAD (CSK)',
-    path: '/products#socket-counter-sunk-head',
-    description: 'Screws that sit flush with the surface, featuring a conical head.',
-    image: '/products/bb2-hd.jpeg'
-  },
-  {
-    id: 3,
-    name: 'SOCKET SET SCREW',
-    path: '/products#socket-set-screw',
-    description: 'Headless screws fully threaded, used for fastening one object within another.',
-    image: '/products/bb3.png'
-  },
-  {
-    id: 4,
-    name: 'BUTTON HEAD CAP SCREW',
-    path: '/products#button-head-cap-screw',
-    description: 'Screws with a wide, low-profile cylindrical head and hexagonal drive.',
-    image: '/products/bb4-hd.jpeg'
-  },
-  {
-    id: 5,
-    name: 'HEX NUTS',
-    path: '/products#hex-nuts',
-    description: 'Six-sided nuts used with bolts and screws to fasten components.',
-    image: '/products/bb5-hd.jpeg'
-  },
-  {
-    id: 6,
-    name: 'HEX HEAD BOLT/SCREW',
-    path: '/products#hex-head-bolt-screw',
-    description: 'Bolts/screws with a hexagonal head, driven by a wrench.',
-    image: '/products/bb6-hd.jpeg'
-  },
-  {
-    id: 7,
-    name: 'HEXAGON WRENCHES (ALLEN KEYS)',
-    path: '/products#hexagon-wrenches',
-    description: 'L-shaped tools used to drive bolts and screws with hexagonal sockets.',
-    image: '/products/bb7.png'
-  },
-  {
-    id: 8,
-    name: 'SPECIAL FASTENERS',
-    path: '/products#special-fasteners',
-    description: 'Custom-engineered fasteners designed for specific applications.',
-    image: '/products/bb8.png'
-  }
-];
+import { productCategories } from '../data/products';
 
 
 export default function Navigation() {
@@ -132,7 +74,7 @@ export default function Navigation() {
                 className={`absolute left-0 top-full pt-2 w-96 bg-gray-700 rounded-lg shadow-xl overflow-hidden transition-all duration-300 origin-top z-[9999] ${isProductsOpen ? 'block' : 'hidden'}`}
               >
                 <div className="py-2 max-h-[80vh] overflow-y-auto">
-                  {products.map((product, index) => (
+                  {productCategories.map((product, index) => (
                     <Fade 
                       key={product.id} 
                       triggerOnce 
@@ -150,7 +92,7 @@ export default function Navigation() {
                             <img 
                               src={product.image} 
                               alt={product.name}
-                              className="w-full h-full object-cover rounded-lg"
+                              className="w-full h-full object-contain"
                             />
                           </div>
                           <div className="flex-1">
@@ -223,7 +165,7 @@ export default function Navigation() {
               }`}
             >
               <div className="py-2 space-y-2">
-                {products.map((product) => (
+                {productCategories.map((product) => (
                   <Link
                     key={product.id}
                     to={`/products?product=${product.id}`}
@@ -238,7 +180,7 @@ export default function Navigation() {
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover rounded"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                       <span>{product.name}</span>

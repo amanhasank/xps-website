@@ -3,7 +3,7 @@ export const productCategories = [
     id: 1,
     name: 'SOCKET HEAD CAP SCREW',
     description: 'High-strength screws with a cylindrical head and hexagonal drive.',
-    image: '/products/shoulder bolt.jpg',
+    image: '/products/shcs.png',
     mainImage: '/products/prd-1.png',
     technicalImage: '/products/prd-t.png',
     specifications: [
@@ -377,97 +377,96 @@ export const productCategories = [
     name: 'SPECIAL FASTENERS',
     description: 'Custom-engineered fasteners designed for specific applications.',
     image: '/products/XPS SPL Item Cover.jpg',
-    mainImage: '/products/sp1.jpg',
-    technicalImage: '/products/sp5.png',
-    additionalImages: [
-      {
-        title: 'Wheel Bolt',
-        image: '/products/wheel bolt.jpg'
-      },
-      {
-        title: 'Connecting Rod Bolt',
-        image: '/products/connecting rod bolt.jpg'
-      },
-      {
-        title: 'Shoulder Bolt',
-        image: '/products/shoulder bolt.jpg'
-      },
-      {
-        title: 'Tooth Bolt',
-        image: '/products/tooth bolt.jpg'
-      },
-      {
-        title: 'Axle',
-        image: '/products/axle.jpg'
-      },
-      {
-        title: 'Torx Screw',
-        image: '/products/torx screw.jpg'
-      },
-      {
-        title: 'Flange Bolt',
-        image: '/products/sp2.jpg'
-      },
-      {
-        title: 'Studs',
-        image: '/products/sp4.jpg'
-      }
-    ],
-    specifications: [
-      'Custom designed as per customer requirements and drawings',
-      'Wheel bolts for automotive applications',
-      'Connecting rod bolts for engine applications',
-      'Shoulder bolts for precise positioning',
-      'Tooth bolts for track shoe assemblies',
-      'Axles for bearing and wheel mounting',
-      'Torx screws for high-torque applications',
-      'Flange bolts with integrated washer',
-      'Studs for threaded connections',
-      'Dowel pins for precision alignment',
-      'Special thread profiles and dimensions'
-    ],
+    specifications: [],
     pages: [
       {
         pageNumber: 1,
-        title: 'Technical Specifications',
+        title: 'Connecting Rod Bolt',
+        image: '/products/connecting_rod_bolt2.png',
         content: [
-          { type: 'text', value: 'Connecting Rod Bolt – Grade: 8.8/10.9/12.9 | Standard: ISO 898-1' },
-          { type: 'text', value: 'Wheel Bolt – Grade: 10.9 | Standard: DIN 74361' },
-          { type: 'text', value: 'Stud – Grade: 10.9 | Standard: DIN 938 / DIN 939' },
-          { type: 'text', value: 'Flange Bolt – Grade: 8.8/10.9 | Standard: DIN 6921' },
-          { type: 'text', value: 'Dowel Pin – Grade: Hardened | Standard: ISO 8734 (DIN 6325)' },
-          { type: 'text', value: 'Track Shoe Bolt – Grade: 10.9/12.9 | Standard: DIN 864' },
-          { type: 'text', value: 'Tooth Bolt – Grade: 10.9 | Standard: DIN 608' },
-          { type: 'text', value: 'Shoulder Bolt – Grade: 10.9/12.9 | Standard: ISO 7379 (DIN 7379)' },
-          { type: 'text', value: 'Axle – Grade: 10.9/12.9 | Standard: As per drawing' },
-          { type: 'text', value: 'Torx Screw – Grade: 8.8/10.9/12.9 | Standard: ISO 14579 / DIN 7985' }
+          { type: 'text', value: 'Grade: 8.8 / 10.9 / 12.9  |  Standard: ISO 898-1' },
+          { type: 'text', value: 'Fine pitch rolled thread with a precision shank and controlled under-head radius for engine connecting rod applications.' }
         ]
       },
       {
         pageNumber: 2,
-        title: 'Structural Specifications',
+        title: 'Wheel Bolt',
+        image: '/products/wheel_bolt2.png',
         content: [
-          { type: 'text', value: 'Connecting Rod Bolt: Fine pitch rolled thread, precision shank with controlled under-head radius.' },
-          { type: 'text', value: 'Wheel Bolt: Hexagonal head with conical (60°) or spherical seat for wheel centering; plain shank for shear load.' },
-          { type: 'text', value: 'Stud: Headless fastener with external threads on both ends and a plain central shank.' },
-          { type: 'text', value: 'Flange Bolt: Hexagonal head bolt with integral circular flange under the head.' },
-          { type: 'text', value: 'Dowel Pin: Cylindrical solid pin with chamfered ends.' },
-          { type: 'text', value: 'Track Shoe Bolt: Low-profile oval head with nibs under the head to prevent rotation.' },
-          { type: 'text', value: 'Tooth Bolt: Plow head (flat countersunk) with square neck beneath the head to prevent rotation.' },
-          { type: 'text', value: 'Shoulder Bolt: Precision ground cylindrical shoulder under the head with a short metric threaded end.' },
-          { type: 'text', value: 'Axle: Solid or hollow cylindrical shaft with precision-machined ends; may include splines, keyways, or threaded portions.' },
-          { type: 'text', value: 'Torx Screw: Pan or button head with Torx (star) drive recess, fully or partially threaded.' }
+          { type: 'text', value: 'Grade: 10.9  |  Standard: DIN 74361' },
+          { type: 'text', value: 'Hexagonal head with conical (60°) or spherical seat for wheel centering; plain shank designed to carry shear load and provide secure clamping.' }
         ]
       },
       {
         pageNumber: 3,
-        title: 'General Features',
+        title: 'Stud',
+        image: '/products/stud.png',
         content: [
-          { type: 'text', value: 'All special fasteners are custom-designed as per customer requirements and drawings.' },
-          { type: 'text', value: 'Manufactured to exact dimensional tolerances for critical applications.' },
-          { type: 'text', value: 'Available in a wide range of grades: 8.8, 10.9, 12.9 and hardened variants.' },
-          { type: 'text', value: 'Special thread profiles, head styles, and drive types available on order.' },
-          { type: 'text', value: 'Surface treatments and coatings available as per application requirements.' }
+          { type: 'text', value: 'Grade: 10.9  |  Standard: DIN 938 / DIN 939' },
+          { type: 'text', value: 'Headless fastener with external threads on both ends and a plain central shank for double-sided fastening applications.' }
+        ]
+      },
+      {
+        pageNumber: 4,
+        title: 'Flange Bolt',
+        image: '/products/flange.png',
+        content: [
+          { type: 'text', value: 'Grade: 8.8 / 10.9  |  Standard: DIN 6921' },
+          { type: 'text', value: 'Hexagonal head bolt with an integral circular flange under the head, distributing clamping load over a larger bearing surface.' }
+        ]
+      },
+      {
+        pageNumber: 5,
+        title: 'Dowel Pin',
+        image: '/products/dowel_pin.png',
+        content: [
+          { type: 'text', value: 'Grade: Hardened  |  Standard: ISO 8734 (DIN 6325)' },
+          { type: 'text', value: 'Precision cylindrical solid pin with chamfered ends, used for accurate alignment and location of mating components.' }
+        ]
+      },
+      {
+        pageNumber: 6,
+        title: 'Track Shoe Bolt',
+        image: '/products/track_shoe_bolt.png',
+        content: [
+          { type: 'text', value: 'Grade: 10.9 / 12.9  |  Standard: DIN 864' },
+          { type: 'text', value: 'Low-profile oval head bolt with nibs under the head to lock into the track shoe and prevent rotation during assembly.' }
+        ]
+      },
+      {
+        pageNumber: 7,
+        title: 'Tooth Bolt',
+        image: '/products/tooth_bolt2.png',
+        content: [
+          { type: 'text', value: 'Grade: 10.9  |  Standard: DIN 608' },
+          { type: 'text', value: 'Plow head (flat countersunk) bolt with a square neck beneath the head to prevent rotation, for agricultural and earthmoving equipment.' }
+        ]
+      },
+      {
+        pageNumber: 8,
+        title: 'Shoulder Bolt',
+        image: '/products/shoulder_bolt2.png',
+        content: [
+          { type: 'text', value: 'Grade: 10.9 / 12.9  |  Standard: ISO 7379 (DIN 7379)' },
+          { type: 'text', value: 'Precision ground cylindrical shoulder (unthreaded shank) under the head with a short metric threaded end for pivot and locating applications.' }
+        ]
+      },
+      {
+        pageNumber: 9,
+        title: 'Axle',
+        image: '/products/axle2.png',
+        content: [
+          { type: 'text', value: 'Grade: 10.9 / 12.9  |  Standard: As per drawing' },
+          { type: 'text', value: 'Solid or hollow cylindrical shaft with precision-machined ends for bearing and wheel mounting; may include splines, keyways, or threaded portions.' }
+        ]
+      },
+      {
+        pageNumber: 10,
+        title: 'Torx Screw',
+        image: '/products/torx_screw2.png',
+        content: [
+          { type: 'text', value: 'Grade: 8.8 / 10.9 / 12.9  |  Standard: ISO 14579 / DIN 7985' },
+          { type: 'text', value: 'Pan or button head screw with a Torx (star) drive recess, offering higher torque transmission and reduced cam-out compared to hex drives.' }
         ]
       }
     ]

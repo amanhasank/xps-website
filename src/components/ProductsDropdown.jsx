@@ -24,11 +24,11 @@ export default function ProductsDropdown({ isOpen, onMouseLeave }) {
                 className="block px-4 py-3 hover:bg-gray-600 transition-all duration-200 group"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 flex-shrink-0">
+                  <div className="w-16 h-16 flex-shrink-0 bg-white rounded-lg flex items-center justify-center p-1">
                     <img 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover rounded-lg"
+                      className="w-full h-full object-contain rounded-md"
                     />
                   </div>
                   <div className="flex-1">
