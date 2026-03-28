@@ -86,10 +86,10 @@ export default function ManufacturingPage() {
       id: 9,
       title: 'THREAD ROLLING',
       description: 'Threads are cold-formed by displacing metal between precision dies, producing stronger threads with superior surface finish.',
-      image: '/manufacturing/DSC_8430.jpg',
+      image: '/manufacturing/thread-rolling-machine.png',
       detailedDescription: 'Thread Rolling is a cold-forming process where threads are formed by pressing the fastener blank between two or three hardened dies. This displaces rather than cuts the material, resulting in threads with greater tensile strength, improved fatigue resistance, and a superior surface finish compared to cut threads.',
       images: [
-        '/manufacturing/DSC_8430.jpg'
+        '/manufacturing/thread-rolling-machine.png'
       ],
       specifications: [
         {
