@@ -20,10 +20,12 @@ export default function ManufacturingPage() {
       id: 1,
       title: 'RAW MATERIAL & WIRE PROCESSING',
       description: 'Steel sourced directly from reputed manufacturers, 100% inspected for chemical, metallurgical, and mechanical properties before processing.',
-      image: '/manufacturing/DSC_8435.jpg',
+      image: '/manufacturing/raw-1.png',
       detailedDescription: 'XPS sources high-quality steel from reputed manufacturers (JSW, JSPL). Every lot is inspected for chemical composition (by Spectrometer), metallurgical and mechanical properties, and tagged with a unique heat number. Wire drawing then provides the exact wire size required for cold forging. All records are maintained and available on demand.',
       images: [
-        '/manufacturing/DSC_8434.jpg'
+        '/manufacturing/raw-1.png',
+        '/manufacturing/raw-2.png',
+        '/manufacturing/raw-3.png'
       ],
       specifications: [
         {
@@ -36,10 +38,12 @@ export default function ManufacturingPage() {
       id: 2,
       title: 'HOT FORGING',
       description: 'Metal is heated by high-speed electric induction and shaped under force into the required form. Used for fasteners M27 and above.',
-      image: '/manufacturing/hot.png',
+      image: '/manufacturing/hot-forging-1.png',
       detailedDescription: 'Hot Forging shapes metal by heating it to the proper temperature using high-speed electric induction before pressing it into a die. This method is used for larger diameter fasteners (M27 and above) that are too large or insufficiently malleable for cold forging. XPS has the capability to forge highly special parts — bolts, screws, studs — in addition to the standard range.',
       images: [
-        '/manufacturing/forging.png'
+        '/manufacturing/hot-forging-1.png',
+        '/manufacturing/hot.png',
+        '/manufacturing/hot-forging-3.png'
       ],
       specifications: [
         {
@@ -55,8 +59,9 @@ export default function ManufacturingPage() {
       image: '/manufacturing/DSC_8432.jpg',
       detailedDescription: 'Cold Forging shapes metal at room temperature using external compressive forces on fully automatic, high-speed multi-station bolt formers. This process delivers superior grain flow, dimensional accuracy, and surface quality. XPS produces a wide range of high-tensile fasteners (M3 to M24) by cold forging, with hot forging used above M24.',
       images: [
-        '/manufacturing/cold.png',
-        '/manufacturing/DSC_8432.jpg'
+        '/manufacturing/cold-forging-1.png',
+        '/manufacturing/cold-forging-2.png',
+        '/manufacturing/cold-forging-3.png'
       ],
       specifications: [
         {
@@ -69,11 +74,12 @@ export default function ManufacturingPage() {
       id: 4,
       title: 'SECONDARY OPERATIONS',
       description: 'In-house CNC, drilling, boring, grinding, rolling, and milling for special fastener requirements.',
-      image: '/manufacturing/DSC_8394.jpg',
+      image: '/manufacturing/so-1.png',
       detailedDescription: 'XPS is capable of performing many secondary operations in-house, including CNC machining, drilling, boring, grinding, thread rolling, and milling — enabling complete control over special and custom fastener requirements without outsourcing.',
       images: [
-        '/manufacturing/DSC_8230.jpg',
-        '/manufacturing/DSC_8394.jpg'
+        '/manufacturing/so-1.png',
+        '/manufacturing/so-2.png',
+        '/manufacturing/so-3.png'
       ],
       specifications: [
         {
@@ -89,6 +95,8 @@ export default function ManufacturingPage() {
       image: '/manufacturing/thread-rolling-machine.png',
       detailedDescription: 'Thread Rolling is a cold-forming process where threads are formed by pressing the fastener blank between two or three hardened dies. This displaces rather than cuts the material, resulting in threads with greater tensile strength, improved fatigue resistance, and a superior surface finish compared to cut threads.',
       images: [
+        '/manufacturing/thread-rolling-1.png',
+        '/manufacturing/thread-rolling-2.png',
         '/manufacturing/thread-rolling-machine.png'
       ],
       specifications: [
@@ -102,10 +110,12 @@ export default function ManufacturingPage() {
       id: 5,
       title: 'HEAT TREATMENT',
       description: 'Hardening and tempering to achieve the required strength class, with minimum 90% martensite grain structure at the core.',
-      image: '/manufacturing/DSC_8199.jpg',
+      image: '/manufacturing/ht-1.png',
       detailedDescription: `Heat Treatment is conducted to ensure fasteners meet the required strength and hardness class. XPS uses a state-of-the-art continuous furnace to achieve consistent results. The process attains a minimum of 90% martensite grain structure at the core — the key quality indicator for high-tensile fasteners. All heat treatment data is recorded and available on demand.`,
       images: [
-        '/manufacturing/DSC_8199.jpg'
+        '/manufacturing/ht-1.png',
+        '/manufacturing/ht-2.png',
+        '/manufacturing/ht-3.png'
       ],
       specifications: [
         {
@@ -118,6 +128,7 @@ export default function ManufacturingPage() {
       id: 6,
       title: 'SURFACE FINISHING',
       description: 'Applied to protect fasteners from corrosion and enhance appearance — multiple coating options available as per customer requirement.',
+      
       image: '/manufacturing/st-1.png',
       detailedDescription: `Surface finishing protects fasteners from corrosion and improves aesthetics. XPS offers a wide range of treatments on automatic plating and phosphating lines:
 

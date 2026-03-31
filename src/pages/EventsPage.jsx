@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { Calendar, MapPin, ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-const events = [
+const upcomingEvents = [];
+
+const pastEvents = [
   // {
   //   id: 1,
   //   title: "India Warehousing Show 2025",
@@ -191,53 +193,61 @@ export default function EventsPage() {
 
           {/* Featured Upcoming Events */}
           <div className="max-w-7xl mx-auto mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {events.slice(0, 1).map((event, index) => (
-                <Fade key={event.id} triggerOnce delay={index * 100}>
-                  <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
-                    <div className="relative h-[400px] group">
-                      <img 
-                        src={event.images[0]} 
-                        alt={event.title}
-                        className="w-full h-full object-cover filter blur-sm transition-all duration-500 group-hover:blur-none"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{event.title}</h3>
-                        <div className="flex items-center space-x-6 mb-4">
-                          <div className="flex items-center">
-                            <Calendar className="w-6 h-6 mr-2" />
-                            <span className="text-lg">{event.date}</span>
+            {upcomingEvents.length === 0 ? (
+              <div className="bg-white rounded-2xl shadow-md p-10 text-center text-gray-600">
+                No upcoming events at the moment.
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {upcomingEvents.slice(0, 1).map((event, index) => (
+                  <Fade key={event.id} triggerOnce delay={index * 100}>
+                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl">
+                      <div className="relative h-[400px] group">
+                        <img 
+                          src={event.images[0]} 
+                          alt={event.title}
+                          className="w-full h-full object-cover filter blur-sm transition-all duration-500 group-hover:blur-none"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{event.title}</h3>
+                          <div className="flex items-center space-x-6 mb-4">
+                            <div className="flex items-center">
+                              <Calendar className="w-6 h-6 mr-2" />
+                              <span className="text-lg">{event.date}</span>
+                            </div>
+                            <div className="flex items-center">
+                              <MapPin className="w-6 h-6 mr-2" />
+                              <span className="text-lg">{event.location}</span>
+                            </div>
                           </div>
-                          <div className="flex items-center">
-                            <MapPin className="w-6 h-6 mr-2" />
-                            <span className="text-lg">{event.location}</span>
-                          </div>
-                        </div>
-                        <div className="bg-blue-600/90 inline-block px-4 py-2 rounded-lg mb-4">
-                          <span className="font-semibold">Booth: {event.booth}</span>
-                        </div>
-                        <p className="text-lg mb-6 line-clamp-3">{event.description}</p>
-                        <button 
-                          onClick={() => openModal(event)}
-                          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg flex items-center text-lg transform transition-all duration-300 hover:scale-105 hover:translate-x-2 group"
-                        >
-                          <span className="relative overflow-hidden">
-                            <span className="block transition-transform duration-300 group-hover:-translate-y-full">
-                              View Details
+                          {event.booth && (
+                            <div className="bg-blue-600/90 inline-block px-4 py-2 rounded-lg mb-4">
+                              <span className="font-semibold">Booth: {event.booth}</span>
+                            </div>
+                          )}
+                          <p className="text-lg mb-6 line-clamp-3">{event.description}</p>
+                          <button 
+                            onClick={() => openModal(event)}
+                            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg flex items-center text-lg transform transition-all duration-300 hover:scale-105 hover:translate-x-2 group"
+                          >
+                            <span className="relative overflow-hidden">
+                              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                                View Details
+                              </span>
+                              <span className="absolute top-0 left-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
+                                View Details
+                              </span>
                             </span>
-                            <span className="absolute top-0 left-0 transition-transform duration-300 translate-y-full group-hover:translate-y-0">
-                              View Details
-                            </span>
-                          </span>
-                          <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
-                        </button>
+                            <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Fade>
-              ))}
-            </div>
+                  </Fade>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Past Events Section */}
@@ -247,7 +257,7 @@ export default function EventsPage() {
 
           {/* Event Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {events.slice(2).map((event, index) => (
+            {pastEvents.map((event, index) => (
               <Fade key={event.id} triggerOnce delay={index * 100}>
                 <div 
                   className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
