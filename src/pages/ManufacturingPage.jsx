@@ -118,7 +118,7 @@ export default function ManufacturingPage() {
       id: 6,
       title: 'SURFACE FINISHING',
       description: 'Applied to protect fasteners from corrosion and enhance appearance — multiple coating options available as per customer requirement.',
-      image: '/manufacturing/surface.png',
+      image: '/manufacturing/st-1.png',
       detailedDescription: `Surface finishing protects fasteners from corrosion and improves aesthetics. XPS offers a wide range of treatments on automatic plating and phosphating lines:
 
 • Zinc & Manganese Phosphate Coating
@@ -129,7 +129,9 @@ export default function ManufacturingPage() {
 • Hot Dip Galvanizing
 • MoS2 Coating`,
       images: [
-        '/manufacturing/surface.png'
+        '/manufacturing/st-1.png',
+        '/manufacturing/st-2.png',
+        '/manufacturing/st-3.png'
       ],
       specifications: [
         {
@@ -142,11 +144,12 @@ export default function ManufacturingPage() {
       id: 7,
       title: 'QUALITY CHECK',
       description: 'Rigorous 100% inspection of dimensional, physical, and chemical properties using state-of-the-art testing equipment.',
-      image: '/manufacturing/DSC_8517.jpg',
+      image: '/manufacturing/qt-1.png',
       detailedDescription: `XPS conducts rigorous quality assurance on all fasteners produced — dimensional, physical, and chemical testing against industry standards or customer-specific requirements. Our experienced quality team uses state-of-the-art equipment to ensure every fastener meets specifications. Dimensional Inspection Reports, Physical & Chemical Reports, and Certificates of Compliance are available on request.`,
       images: [
-        '/manufacturing/DSC_8517.jpg',
-        '/manufacturing/arrow2.png'
+        '/manufacturing/qt-1.png',
+        '/manufacturing/qt-2.png',
+        '/manufacturing/qt-3.png'
       ],
       specifications: [
         {
@@ -159,10 +162,12 @@ export default function ManufacturingPage() {
       id: 8,
       title: 'PACKING & DISPATCH',
       description: 'Fasteners are packed to maintain product integrity as per customer specifications and dispatched for timely delivery.',
-      image: '/slide4.jpg',
+      image: '/manufacturing/packing-1.png',
       detailedDescription: 'All finished fasteners are carefully packed to maintain product integrity, labelled as per customer specifications, and dispatched through reliable logistics partners to ensure timely and safe delivery to the end customer.',
       images: [
-        '/slide4.jpg'
+        '/manufacturing/packing-1.png',
+        '/manufacturing/packing-2.png',
+        '/manufacturing/packing-3.png'
       ],
       specifications: []
     }
