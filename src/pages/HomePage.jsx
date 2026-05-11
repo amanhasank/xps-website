@@ -106,147 +106,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Certifications Section */}
+      {/* Our World Reach Section */}
       <section className="py-12 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <Fade triggerOnce={true}>
-            <h2 className="text-3xl font-semibold text-center mb-12 text-blue-900">International Certifications</h2>
+            <h2 className="text-3xl font-semibold text-center mb-12 text-blue-900">OUR World Reach</h2>
           </Fade>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            <Fade triggerOnce={true} delay={100}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/iso-9001.png"
-                  alt="ISO 9001:2015 Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/iso-9001.png', 'ISO 9001:2015 Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">ISO</div>
-                <div className="text-sm text-gray-600 text-center">9001:2015</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={200}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/iso-45001.png"
-                  alt="ISO 45001:2018 Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/iso-45001.png', 'ISO 45001:2018 Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">ISO</div>
-                <div className="text-sm text-gray-600 text-center">45001:2018</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={300}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/iso-14001.png"
-                  alt="ISO 14001:2015 Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/iso-14001.png', 'ISO 14001:2015 Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">ISO</div>
-                <div className="text-sm text-gray-600 text-center">14001:2015</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={400}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/iatf-16949.png"
-                  alt="IATF 16949:2016 Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/iatf-16949.png', 'IATF 16949:2016 Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">IATF</div>
-                <div className="text-sm text-gray-600 text-center">16949:2016</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={500}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/ce.png"
-                  alt="CE Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/ce.png', 'CE Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">CE</div>
-                <div className="text-sm text-gray-600 text-center">Certification</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={600}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/rohs.png"
-                  alt="ROHS Compliant"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/rohs.png', 'ROHS Compliant')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">ROHS</div>
-                <div className="text-sm text-gray-600 text-center">Compliance</div>
-              </div>
-            </Fade>
-            
-          </div>
-
-          {/* BIS Certifications - Centered */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 max-w-3xl mx-auto">
-            {/* ZED Certificate */}
-            <Fade triggerOnce={true} delay={700}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/zed.png"
-                  alt="ZED Certified"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/zed.png', 'ZED Certified')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">ZED</div>
-                <div className="text-sm text-gray-600 text-center">Certification</div>
-              </div>
-            </Fade>
-            <Fade triggerOnce={true} delay={700}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/bis1.png"
-                  alt="BIS Certification 1"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/bis1.png', 'BIS Certification 1')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
-                <div className="text-sm text-gray-600 text-center">Certification 1</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={800}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/bis2.png"
-                  alt="BIS Certification 2"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/bis2.png', 'BIS Certification 2')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
-                <div className="text-sm text-gray-600 text-center">Certification 2</div>
-              </div>
-            </Fade>
-
-            <Fade triggerOnce={true} delay={900}>
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src="/logos/bis3.png"
-                  alt="BIS Certification 3"
-                  className="w-16 h-16 object-contain mb-4 cursor-pointer"
-                  onClick={() => openModal('/logos/bis3.png', 'BIS Certification 3')}
-                />
-                <div className="text-2xl font-bold text-blue-600 mb-1">BIS</div>
-                <div className="text-sm text-gray-600 text-center">Certification 3</div>
-              </div>
-            </Fade>
-          </div>
+          <Fade triggerOnce={true} delay={150}>
+            <img
+              src="/world-reach.jpg"
+              alt="XPS India global reach - USA, Europe, India"
+              className="w-full h-auto object-contain"
+            />
+          </Fade>
         </div>
       </section>
 

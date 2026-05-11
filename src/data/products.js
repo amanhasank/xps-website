@@ -376,7 +376,7 @@ export const productCategories = [
     id: 8,
     name: 'SPECIAL FASTENERS',
     description: 'Custom-engineered fasteners designed for specific applications.',
-    image: '/products/XPS SPL Item Cover.jpg',
+    image: '/products/special-fasteners-new.png',
     specifications: [],
     pages: [
       {

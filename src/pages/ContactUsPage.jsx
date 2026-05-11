@@ -76,27 +76,89 @@ export default function ContactUsPage() {
         {/* Contact Details */}
         <div className="md:w-1/2 space-y-6">
           <div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Contact Information</h3>
-            <p className="flex items-center text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
-              </svg>
-              Phone: <a href="tel:+918396941941" className="ml-2 text-blue-600 hover:underline">+91 9254012456</a>
-            </p>
-            <p className="flex items-center text-gray-700 mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-              Email: <a href="mailto:sales@xpsindia.com" className="ml-2 text-blue-600 hover:underline">sales@xpsindia.com</a>
-            </p>
-            <p className="flex items-start text-gray-700 mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-              </svg>
-              Address: <span className="ml-2">Xtra Precision Screws Private Limited
-57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India</span>
-            </p>
+            <h3 className="text-xl font-semibold text-blue-900 mb-4">Contact Information</h3>
+
+            <div className="space-y-4">
+              {/* Sales */}
+              <div>
+                <h4 className="font-semibold text-gray-800">Sales</h4>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <a href="mailto:sales@xpsindia.com" className="text-blue-600 hover:underline">sales@xpsindia.com</a>
+                </p>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  </svg>
+                  <a href="tel:+919254012456" className="text-blue-600 hover:underline">+91 9254012456</a>
+                </p>
+              </div>
+
+              {/* Dispatch */}
+              <div>
+                <h4 className="font-semibold text-gray-800">Dispatch</h4>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <a href="mailto:dispatch1@xpsindia.com" className="text-blue-600 hover:underline">dispatch1@xpsindia.com</a>
+                </p>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  </svg>
+                  <a href="tel:+917496979733" className="text-blue-600 hover:underline">+91 7496979733</a>
+                </p>
+              </div>
+
+              {/* Purchase */}
+              <div>
+                <h4 className="font-semibold text-gray-800">Purchase</h4>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <a href="mailto:purchase@xpsindia.com" className="text-blue-600 hover:underline">purchase@xpsindia.com</a>
+                </p>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  </svg>
+                  <a href="tel:+919729811998" className="text-blue-600 hover:underline">+91 9729811998</a>
+                </p>
+              </div>
+
+              {/* HR */}
+              <div>
+                <h4 className="font-semibold text-gray-800">HR</h4>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  <a href="mailto:hr@xpsindia.com" className="text-blue-600 hover:underline">hr@xpsindia.com</a>
+                </p>
+                <p className="flex items-center text-gray-700 mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                  </svg>
+                  <a href="tel:+919817907015" className="text-blue-600 hover:underline">+91 9817907015</a>
+                </p>
+              </div>
+
+              {/* Address */}
+              <p className="flex items-start text-gray-700 pt-2 border-t border-gray-200">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-1 text-blue-600 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span><span className="font-semibold">Address:</span> Xtra Precision Screws Private Limited, 57 KM Milestone, Delhi Rohtak Road, Village Gandhra, Tehsil Sampla, Rohtak - 124501 Haryana, India</span>
+              </p>
+            </div>
           </div>
 
           {/* Google Maps Embed */}
