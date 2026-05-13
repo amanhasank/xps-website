@@ -88,19 +88,101 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Our World Reach Section */}
+      {/* World Reach + Certifications Section */}
       <section className="py-12 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <Fade triggerOnce={true}>
-            <h2 className="text-3xl font-semibold text-center mb-12 text-blue-900">OUR World Reach</h2>
-          </Fade>
-          <Fade triggerOnce={true} delay={150}>
-            <img
-              src="/world-reach.jpg"
-              alt="XPS India global reach - USA, Europe, India"
-              className="w-full h-auto object-contain"
-            />
-          </Fade>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:items-stretch">
+          {/* Left — World Reach */}
+          <div className="flex flex-col">
+            <Fade triggerOnce={true}>
+              <h2 className="text-3xl font-semibold text-center mb-8 text-blue-900">OUR World Reach</h2>
+            </Fade>
+            <Fade triggerOnce={true} delay={150} className="flex-1 flex items-center justify-center">
+              <img
+                src="/world-reach.jpg"
+                alt="XPS India global reach - USA, Europe, India"
+                className="w-full h-full max-h-full object-contain"
+              />
+            </Fade>
+          </div>
+
+          {/* Right — International Certifications */}
+          <div className="flex flex-col">
+            <Fade triggerOnce={true}>
+              <h2 className="text-3xl font-semibold text-center mb-8 text-blue-900">International Certifications</h2>
+            </Fade>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 flex-1 content-center">
+              <Fade triggerOnce={true} delay={100}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/iso-9001.png" alt="ISO 9001:2015 Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">ISO</div>
+                  <div className="text-xs text-gray-600 text-center">9001:2015</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={150}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/iso-45001.png" alt="ISO 45001:2018 Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">ISO</div>
+                  <div className="text-xs text-gray-600 text-center">45001:2018</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={200}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/iso-14001.png" alt="ISO 14001:2015 Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">ISO</div>
+                  <div className="text-xs text-gray-600 text-center">14001:2015</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={250}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/iatf-16949.png" alt="IATF 16949:2016 Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">IATF</div>
+                  <div className="text-xs text-gray-600 text-center">16949:2016</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={300}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/ce.png" alt="CE Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">CE</div>
+                  <div className="text-xs text-gray-600 text-center">Certification</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={350}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/rohs.png" alt="ROHS Compliant" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">ROHS</div>
+                  <div className="text-xs text-gray-600 text-center">Compliance</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={400}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/zed.png" alt="ZED Certified" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">ZED</div>
+                  <div className="text-xs text-gray-600 text-center">Certification</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={450}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/bis1.png" alt="BIS Certification 1" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">BIS</div>
+                  <div className="text-xs text-gray-600 text-center">Cert 1</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={500}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/bis2.png" alt="BIS Certification 2" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">BIS</div>
+                  <div className="text-xs text-gray-600 text-center">Cert 2</div>
+                </div>
+              </Fade>
+              <Fade triggerOnce={true} delay={550}>
+                <div className="flex flex-col items-center p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src="/logos/bis3.png" alt="BIS Certification 3" className="w-12 h-12 object-contain mb-2" />
+                  <div className="text-lg font-bold text-blue-600">BIS</div>
+                  <div className="text-xs text-gray-600 text-center">Cert 3</div>
+                </div>
+              </Fade>
+            </div>
+          </div>
         </div>
       </section>
 

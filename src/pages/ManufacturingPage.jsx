@@ -37,7 +37,7 @@ export default function ManufacturingPage() {
       {/* Hero Section */}
       <section
         className="relative h-[55vh] bg-cover bg-center flex items-center justify-center text-center"
-        style={{ backgroundImage: "url('/manufacturing/rm-4.png')" }}
+        style={{ backgroundImage: "url('/manufacturing/maufacturing.png')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
         <div className="relative z-10 text-white px-4">

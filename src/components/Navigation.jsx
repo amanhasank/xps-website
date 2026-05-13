@@ -16,52 +16,16 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-white1-400 text-xs md:text-sm px-4 py-2 flex flex-wrap justify-between items-center text-black-300 gap-y-2">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="font-semibold whitespace-nowrap">Sales:</span>
-            <a href="mailto:sales@xpsindia.com" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">sales@xpsindia.com</span>
-            </a>
-            <a href="tel:+919254012456" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Phone className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">+91 9254012456</span>
-            </a>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="font-semibold whitespace-nowrap">Dispatch:</span>
-            <a href="mailto:dispatch1@xpsindia.com" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">dispatch1@xpsindia.com</span>
-            </a>
-            <a href="tel:+917496979733" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Phone className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">+91 7496979733</span>
-            </a>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="font-semibold whitespace-nowrap">Purchase:</span>
-            <a href="mailto:purchase@xpsindia.com" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">purchase@xpsindia.com</span>
-            </a>
-            <a href="tel:+919729811998" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Phone className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">+91 9729811998</span>
-            </a>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="font-semibold whitespace-nowrap">HR:</span>
-            <a href="mailto:hr@xpsindia.com" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">hr@xpsindia.com</span>
-            </a>
-            <a href="tel:+919817907015" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
-              <Phone className="w-4 h-4 flex-shrink-0" />
-              <span className="whitespace-nowrap">+91 9817907015</span>
-            </a>
-          </div>
+      <div className="bg-white1-400 text-sm px-4 py-2 flex flex-wrap justify-between items-center text-black-300">
+        <div className="flex flex-wrap items-center gap-4">
+          <a href="mailto:sales@xpsindia.com" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+            <Mail className="w-4 h-4 flex-shrink-0" />
+            <span className="whitespace-nowrap">sales@xpsindia.com</span>
+          </a>
+          <a href="tel:+919254012456" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+            <Phone className="w-4 h-4 flex-shrink-0" />
+            <span className="whitespace-nowrap">+91 - 9254012456</span>
+          </a>
         </div>
         <div className="flex space-x-3">
           <a href="https://www.linkedin.com/company/xps-india" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
