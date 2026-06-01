@@ -19,6 +19,12 @@
 .env.production.local
 
 public/logos/xpsvideo.mp4
+
+# local-only: asset cleanup backup + deploy artifacts (kept on disk, not pushed)
+/backup-assets
+/.audit
+/xps-website-cpanel.zip
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

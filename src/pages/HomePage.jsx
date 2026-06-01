@@ -301,7 +301,7 @@ export default function HomePage() {
               <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                 <iframe
                   className="w-full h-full"
-                  src="https://firebasestorage.googleapis.com/v0/b/connectme-e3fef.appspot.com/o/xpsvideo.mp4?alt=media&token=0543e109-fb58-464a-a77b-4916c5eabfa0"
+                  src="https://www.youtube.com/embed/e3aIa9gNxWU"
                   title="XPS India Company Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
